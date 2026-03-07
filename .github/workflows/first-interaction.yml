@@ -1,0 +1,40 @@
+name: "Welcome New Contributors"
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  first-interaction:
+    name: First Interaction
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            Thank you for opening your first issue in Blueprint of Agents.
+
+            A maintainer will review this shortly. In the meantime:
+
+            - Make sure your issue follows one of our [templates](https://github.com/ambicuity/blueprint-of-agents/issues/new/choose).
+            - Check [CONTRIBUTING.md](https://github.com/ambicuity/blueprint-of-agents/blob/main/CONTRIBUTING.md) for contribution guidelines.
+
+            We appreciate your time and effort.
+          pr-message: |
+            Thank you for your first pull request to Blueprint of Agents.
+
+            A maintainer will review this shortly. While you wait, please verify:
+
+            - [ ] PR title follows the Conventional Commits format
+            - [ ] PR description contains `Fixes #<issue-number>`
+            - [ ] You are assigned to the linked issue
+            - [ ] CHANGELOG.md is updated under `## [Unreleased]`
+
+            See [CONTRIBUTING.md](https://github.com/ambicuity/blueprint-of-agents/blob/main/CONTRIBUTING.md) for the full checklist.

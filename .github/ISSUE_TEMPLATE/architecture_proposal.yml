@@ -1,0 +1,57 @@
+name: Architecture Proposal
+description: Propose a major structural or organizational change to the repository
+title: "[Architecture]: "
+labels: ["architecture", "discussion"]
+assignees: ["ambicuity"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Architecture proposals are for significant changes to the repository structure,
+        agent design patterns, or project conventions. Please discuss before implementing.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Proposal Summary
+      description: A concise summary of the proposed change.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation and Problem Statement
+      description: Why is this change needed? What problem does it solve?
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed Design
+      description: |
+        Describe the proposed architecture or structural change in detail.
+        Include before/after directory structures, file layouts, or diagrams.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: |
+        What existing files, agents, or workflows would be affected?
+        Are there any breaking changes?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other approaches did you consider and why were they rejected?
+    validations:
+      required: false
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation Plan
+      description: How would you implement this change? Break it into phases if applicable.
+    validations:
+      required: false

@@ -1,0 +1,35 @@
+name: "Auto Thank"
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  thank-contributor:
+    name: Thank Merged PR Author
+    runs-on: ubuntu-latest
+    if: >
+      github.event.pull_request.merged == true &&
+      github.event.pull_request.user.login != 'dependabot[bot]'
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const user = context.payload.pull_request.user.login;
+            const prNumber = context.payload.pull_request.number;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: [
+                `Thank you @${user} for your contribution to Blueprint of Agents.`,
+                '',
+                'Your changes have been merged into `main` and will be included in the next release.',
+                '',
+                'You have been added to our [Contributors Hall of Fame](https://github.com/ambicuity/blueprint-of-agents/blob/main/CONTRIBUTORS.md).',
+              ].join('\n'),
+            });

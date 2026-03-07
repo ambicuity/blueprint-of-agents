@@ -1,0 +1,57 @@
+name: "Assignment Check"
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+  issues: read
+
+jobs:
+  check-assignment:
+    name: Issue Assignment Check
+    runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.pull_request.body || '';
+            const issueMatch = body.match(/(fix(es)?|close(s|d)?|resolve(s|d)?)\s+#(\d+)/i);
+
+            if (!issueMatch) {
+              console.log('No linked issue found -- skipping assignment check.');
+              return;
+            }
+
+            const issueNumber = parseInt(issueMatch[5] || issueMatch[4]);
+            const prAuthor = context.payload.pull_request.user.login;
+
+            try {
+              const { data: issue } = await github.rest.issues.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+              });
+
+              const isAssigned = issue.assignees.some(a => a.login === prAuthor);
+
+              if (!isAssigned) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  body: [
+                    '## Assignment Check',
+                    '',
+                    `Issue #${issueNumber} is not assigned to you (@${prAuthor}).`,
+                    '',
+                    'Please comment \`/assign\` on the issue before opening a PR.',
+                    'This prevents duplicate effort from multiple contributors.',
+                  ].join('\n'),
+                });
+              }
+            } catch (e) {
+              console.log('Could not fetch issue:', e.message);
+            }

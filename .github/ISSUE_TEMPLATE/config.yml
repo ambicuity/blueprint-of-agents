@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: General Discussion
+    url: https://github.com/ambicuity/blueprint-of-agents/discussions
+    about: Ask questions, share ideas, or discuss agent design patterns
+  - name: Security Vulnerability
+    url: https://github.com/ambicuity/blueprint-of-agents/blob/main/SECURITY.md
+    about: Report security vulnerabilities privately via email

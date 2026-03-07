@@ -1,0 +1,60 @@
+# Labeler configuration -- auto-labels PRs based on changed paths
+# Docs: https://github.com/actions/labeler
+
+engineering:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/engineering/**'
+
+design:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/design/**'
+
+marketing:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/marketing/**'
+
+product:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/product/**'
+
+project-management:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/project-management/**'
+
+testing:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/testing/**'
+
+support:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/support/**'
+
+spatial-computing:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/spatial-computing/**'
+
+specialized:
+  - changed-files:
+      - any-glob-to-any-file: 'blueprints/specialized/**'
+
+playbooks:
+  - changed-files:
+      - any-glob-to-any-file: 'playbooks/**'
+
+workflows:
+  - changed-files:
+      - any-glob-to-any-file: 'workflows/**'
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '*.md'
+          - 'docs/**'
+          - '!CHANGELOG.md'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/workflows/**'
+          - '.github/CODEOWNERS'
+          - '.pre-commit-config.yaml'

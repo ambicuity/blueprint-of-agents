@@ -1,0 +1,27 @@
+{
+    "projectName": "blueprint-of-agents",
+    "projectOwner": "ambicuity",
+    "repoType": "github",
+    "repoHost": "https://github.com",
+    "files": [
+        "CONTRIBUTORS.md"
+    ],
+    "imageSize": 100,
+    "commit": true,
+    "commitConvention": "angular",
+    "contributors": [
+        {
+            "login": "ambicuity",
+            "name": "Ritesh Rana",
+            "avatar_url": "https://avatars.githubusercontent.com/ambicuity",
+            "profile": "https://github.com/ambicuity",
+            "contributions": [
+                "code",
+                "doc",
+                "maintenance",
+                "infra"
+            ]
+        }
+    ],
+    "contributorsPerLine": 7
+}

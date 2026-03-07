@@ -1,0 +1,48 @@
+name: "Dependabot Auto-Merge"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    name: Auto-Merge Dependabot PRs
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+            });
+
+            // Only auto-merge patch and minor updates
+            const title = pr.title;
+            const isMajor = /bump .+ from \d+\.\d+\.\d+ to (\d+)\.\d+\.\d+/.exec(title);
+
+            if (isMajor && parseInt(isMajor[1]) > 0) {
+              console.log('Major version bump detected -- skipping auto-merge.');
+              return;
+            }
+
+            await github.rest.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              event: 'APPROVE',
+              body: 'Auto-approved: Dependabot patch/minor update.',
+            });
+
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              merge_method: 'squash',
+            });

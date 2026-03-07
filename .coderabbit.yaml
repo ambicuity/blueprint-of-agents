@@ -1,0 +1,75 @@
+language: en-US
+tone_instructions: >
+  Be professional and direct. No emoji. Focus on markdown quality,
+  agent structure compliance, and Conventional Commits adherence.
+  Reference CONTRIBUTING.md for standards.
+
+early_access: true
+
+reviews:
+  profile: strict
+  request_changes_workflow: true
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: true
+  path_instructions:
+    - path: "blueprints/**/*.md"
+      instructions: >
+        Verify agent file structure:
+        1. YAML frontmatter must include name, description, and color fields.
+        2. Required sections: Identity and Memory, Core Mission, Critical Rules,
+           Technical Deliverables, Workflow Process, Communication Style,
+           Learning and Memory, Success Metrics, Advanced Capabilities.
+        3. No emoji characters anywhere.
+        4. Code examples must have language specification for syntax highlighting.
+        5. Success metrics must be measurable and specific (include numbers).
+        6. Personality should be distinctive, not generic.
+    - path: "playbooks/**/*.md"
+      instructions: >
+        Review playbook content for correctness and completeness.
+        Ensure all agent references use the correct file paths under blueprints/.
+        Verify cross-references between playbooks are valid.
+    - path: ".github/workflows/**"
+      instructions: >
+        Review GitHub Actions for security best practices:
+        1. Verify permissions are minimal (principle of least privilege).
+        2. Check that third-party Actions are pinned to specific versions.
+        3. Ensure secrets are not exposed in logs.
+        4. Verify conditional checks (if clauses) are correct.
+    - path: "*.md"
+      instructions: >
+        Check documentation quality:
+        1. No emoji characters.
+        2. All links must be valid and point to ambicuity/blueprint-of-agents.
+        3. Professional tone throughout.
+        4. Proper markdown formatting.
+
+  auto_review:
+    enabled: true
+    drafts: false
+
+chat:
+  auto_reply: true
+
+issue_enrichment:
+  enabled: true
+  instructions: >
+    When a new issue is opened with the plan-me label:
+    1. Analyze the issue description and identify what needs to change.
+    2. Identify affected files in the repository.
+    3. Generate a step-by-step implementation plan.
+    4. Post the plan as a comment on the issue.
+
+    For new agent proposals:
+    1. Suggest which division the agent belongs to.
+    2. List required sections per the agent template.
+    3. Suggest similar existing agents for reference.
+    4. Recommend a filename following the naming convention.
+
+    Standards:
+    - All agents live under blueprints/<division>/.
+    - Filenames are lowercase-kebab-case without division prefix.
+    - YAML frontmatter is required with name, description, color.
+    - No emoji characters anywhere.
+    - All code examples must have language specification.

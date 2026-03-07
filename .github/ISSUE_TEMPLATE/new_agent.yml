@@ -1,0 +1,73 @@
+name: New Agent Proposal
+description: Propose a new agent blueprint for the collection
+title: "[New Agent]: "
+labels: ["enhancement", "new-agent"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a new agent. Please provide as much detail as possible.
+  - type: input
+    id: agent-name
+    attributes:
+      label: Agent Name
+      description: What should this agent be called?
+      placeholder: "e.g., Database Migration Specialist"
+    validations:
+      required: true
+  - type: dropdown
+    id: division
+    attributes:
+      label: Division
+      description: Which division does this agent belong to?
+      options:
+        - Engineering
+        - Design
+        - Marketing
+        - Product
+        - Project Management
+        - Testing
+        - Support
+        - Spatial Computing
+        - Specialized
+        - New Division (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: specialty
+    attributes:
+      label: Specialty and Expertise
+      description: What is this agent's core specialty? What domain expertise does it cover?
+      placeholder: "This agent specializes in..."
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this agent needed? What gap does it fill in the current collection?
+    validations:
+      required: true
+  - type: textarea
+    id: personality
+    attributes:
+      label: Personality Description
+      description: Describe the agent's personality traits, communication style, and approach.
+      placeholder: "This agent is detail-oriented, pragmatic, and..."
+    validations:
+      required: false
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Key Deliverables
+      description: What concrete outputs would this agent produce? Include examples if possible.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any references, examples, or inspiration for this agent.
+    validations:
+      required: false

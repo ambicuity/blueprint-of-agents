@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# OS generated
+Thumbs.db
+ehthumbs.db
+
+# Temp files
+*.tmp
+*.bak
+*.orig
+
+# Source repos (used during initial setup only)
+.source-agency-agents/
+.source-new-grad-jobs/
+
+# Environment
+.env
+.env.local

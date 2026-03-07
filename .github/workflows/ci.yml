@@ -1,0 +1,76 @@
+name: "CI -- Lint and Validate"
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  markdown-lint:
+    name: Markdown Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint Markdown files
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: |
+            **/*.md
+            !CHANGELOG.md
+            !.source-*/**
+
+  yaml-lint:
+    name: YAML Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint YAML files
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: .
+          config_data: |
+            extends: default
+            rules:
+              line-length:
+                max: 200
+              truthy:
+                allowed-values: ['true', 'false', 'on']
+
+  agent-structure:
+    name: Agent Structure Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate agent frontmatter
+        run: |
+          ERRORS=0
+          for f in blueprints/**/*.md; do
+            if [ -f "$f" ]; then
+              # Check for YAML frontmatter
+              if ! head -1 "$f" | grep -q "^---$"; then
+                echo "ERROR: $f missing YAML frontmatter"
+                ERRORS=$((ERRORS + 1))
+              fi
+              # Check for required frontmatter fields
+              if ! grep -q "^name:" "$f"; then
+                echo "ERROR: $f missing 'name' in frontmatter"
+                ERRORS=$((ERRORS + 1))
+              fi
+              if ! grep -q "^description:" "$f"; then
+                echo "ERROR: $f missing 'description' in frontmatter"
+                ERRORS=$((ERRORS + 1))
+              fi
+            fi
+          done
+          if [ $ERRORS -gt 0 ]; then
+            echo "Found $ERRORS validation error(s)"
+            exit 1
+          fi
+          echo "All agent files pass validation"
