@@ -16,7 +16,7 @@ jobs:
       (contains(github.event.comment.body, '/assign') ||
        contains(github.event.comment.body, '.take'))
     steps:
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         with:
           script: |
             const comment = context.payload.comment.body.trim().toLowerCase();
@@ -74,7 +74,7 @@ jobs:
       !github.event.issue.pull_request &&
       contains(github.event.comment.body, '/unassign')
     steps:
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         with:
           script: |
             const user = context.payload.comment.user.login;
@@ -108,7 +108,7 @@ jobs:
       !github.event.issue.pull_request &&
       contains(github.event.comment.body, '/need help')
     steps:
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         with:
           script: |
             const user = context.payload.comment.user.login;
