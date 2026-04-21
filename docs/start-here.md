@@ -12,8 +12,6 @@ related:
   - ../workflows/index.md
 ---
 
-# Start Here
-
 ## If you want value in under 10 minutes
 
 1. Pick a workflow from [workflows/index.md](../workflows/index.md).

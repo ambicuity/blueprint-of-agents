@@ -10,8 +10,6 @@ related:
   - ../../tools/lint-agents.sh
 ---
 
-# Blueprint Schema Standard
-
 ## Required frontmatter
 
 ```yaml

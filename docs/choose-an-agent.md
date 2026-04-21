@@ -11,8 +11,6 @@ related:
   - ./start-here.md
 ---
 
-# Choose an Agent
-
 ## By Outcome
 
 - Build UI quickly: `Frontend Developer`, `UI Designer`, `Rapid Prototyper`
