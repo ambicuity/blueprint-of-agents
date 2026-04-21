@@ -1,0 +1,11 @@
+{
+  "name": "example-skill-pack",
+  "description": "Portable skill pack for multi-runtime agent workflows",
+  "version": "1.0.0",
+  "author": {
+    "name": "your-name"
+  },
+  "license": "MIT",
+  "keywords": ["skills", "agents", "workflows"],
+  "skills": ["./skills/example"]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "example-marketplace",
+  "id": "example-marketplace",
+  "owner": {
+    "name": "your-name"
+  },
+  "metadata": {
+    "description": "Portable marketplace metadata template",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "example-skill-pack",
+      "source": "./",
+      "description": "Portable skill pack template",
+      "version": "1.0.0",
+      "author": {
+        "name": "your-name"
+      },
+      "category": "workflow"
+    }
+  ]
+}

@@ -1,23 +1,47 @@
-# Blueprint of Agents: Production-Ready AI Specialists
+# Blueprint of Agents
 
-A curated collection of meticulously crafted AI agent personalities for [Claude Code](https://docs.anthropic.com/en/docs/build-with-claude/code), [Cursor](https://cursor.sh), and any LLM-powered coding assistant. Each agent is a specialized expert with a distinct personality, proven workflows, concrete deliverables, and measurable success metrics.
+Production-grade AI agent blueprints you can adopt in minutes.
 
-> **61 specialized agents across 9 divisions.** 10,000+ lines of domain expertise, code examples, and battle-tested processes.
+Blueprint of Agents is a Markdown-first library of specialized agent roles, orchestration playbooks, and reusable workflows for teams using [Claude Code](https://docs.anthropic.com/en/docs/build-with-claude/code), [Cursor](https://cursor.sh), and other coding assistants.
+
+- 61 agents across 9 divisions
+- Ready-to-copy activation prompts
+- Practical workflows for MVPs, launches, and incident response
+
+---
+
+## Start in 2 Minutes
+
+Choose one path:
+
+1. **Use one specialist**
+   - Browse the [Blueprint Catalog](blueprints/README.md)
+   - Copy one activation prompt from that blueprint
+2. **Run a proven workflow**
+   - Start with the [Startup MVP workflow](workflows/workflow-startup-mvp.md)
+3. **Run full orchestration**
+   - Use the [Orchestration Framework](playbooks/orchestration-framework.md)
+
+If you only do one thing now, start with path 2.
+
+Need onboarding help? Start at [docs/start-here.md](docs/start-here.md).
 
 ---
 
 ## Table of Contents
 
-1. [What Is This?](#what-is-this)
-2. [Quick Start](#quick-start)
-3. [Agent Roster](#agent-roster)
-4. [Real-World Use Cases](#real-world-use-cases)
-5. [Agent Design Philosophy](#agent-design-philosophy)
-6. [Playbooks and Strategy](#playbooks-and-strategy)
-7. [Contributing](#contributing)
-8. [Roadmap](#roadmap)
-9. [License](#license)
-10. [Community](#community)
+1. [Start in 2 Minutes](#start-in-2-minutes)
+2. [What Is This?](#what-is-this)
+3. [Quick Start](#quick-start)
+4. [Multi-Agent Integration](#multi-agent-integration)
+5. [Agent Roster](#agent-roster)
+6. [Real-World Use Cases](#real-world-use-cases)
+7. [Agent Design Philosophy](#agent-design-philosophy)
+8. [Playbooks and Strategy](#playbooks-and-strategy)
+9. [Contributing](#contributing)
+10. [Roadmap](#roadmap)
+11. [License](#license)
+12. [Community](#community)
 
 ---
 
@@ -59,6 +83,47 @@ Each agent file contains:
 - Success metrics and communication style
 
 Browse the agents below and copy or adapt the ones you need.
+
+---
+
+## Multi-Agent Integration
+
+This repository now includes an additive integration layer for multi-runtime and multi-provider workflows.
+
+### Quick links
+- [Integration Docs](docs/integrations/README.md)
+- [Install Guides](docs/integrations/install-guides.md)
+- [Platform Install Matrix](docs/integrations/install-guides.md#platform-install-matrix)
+- [Provider Compatibility Matrix](reports/provider-compatibility-matrix.md)
+- [Installable Pack Index](manifests/installable-packs.yaml)
+
+### Runtime targets
+- Claude Code
+- Codex CLI
+- Gemini CLI
+- Cursor (workflow/rules integration)
+- OpenCode
+- Plus documented marketplace-style reference coverage for Codex App and Copilot CLI.
+
+### Provider model
+- Model providers: Anthropic (Claude), Gemini, OpenAI-compatible APIs
+- Workflow tools: Cursor
+- Runtimes: Claude Code, Codex CLI, Gemini CLI, OpenCode
+
+### Validate and smoke-test
+```bash
+./tools/validate-integration.sh
+./tools/smoke-test-install.sh
+```
+
+### Migration note
+- Existing `cp -r blueprint-of-agents/blueprints/* ~/.claude/agents/` workflow remains valid and supported.
+
+### Install with dry-run first
+```bash
+./tools/install-skill-pack.sh --target claude --pack blueprints --dry-run
+./tools/install-skill-pack.sh --target codex --pack templates --dry-run
+```
 
 ---
 
@@ -247,7 +312,7 @@ Unique specialists who do not fit in a single category.
 
 ### Scenario 4: Full-Stack Product Discovery
 
-See the [Orchestration Framework Spatial Discovery Exercise](workflows/orchestration-framework-spatial-discovery.md) for a complete example where 8 agents were deployed simultaneously to evaluate a software opportunity and produce a unified product plan covering market validation, technical architecture, brand strategy, go-to-market, support systems, UX research, project execution, and spatial UI design.
+See the [Orchestration Framework Spatial Discovery Exercise](workflows/spatial-discovery-exercise.md) for a complete example where 8 agents were deployed simultaneously to evaluate a software opportunity and produce a unified product plan covering market validation, technical architecture, brand strategy, go-to-market, support systems, UX research, project execution, and spatial UI design.
 
 More examples are available in the [workflows/](workflows/) directory.
 
@@ -271,7 +336,8 @@ The [playbooks/](playbooks/) directory contains comprehensive operational guides
 
 - **[Executive Brief](playbooks/EXECUTIVE-BRIEF.md)** -- High-level overview for decision-makers
 - **[Quick Start Guide](playbooks/QUICKSTART.md)** -- Get started in minutes
-- **[Orchestration Framework Strategy](playbooks/orchestration-framework-strategy.md)** -- Multi-agent orchestration framework
+- **[Orchestration Framework Strategy](playbooks/orchestration-framework.md)** -- Multi-agent orchestration framework
+- **[Playbooks Index](playbooks/index.md)** -- Navigation by phase and scenario
 
 ### Phased Delivery Playbooks
 
@@ -298,6 +364,12 @@ The [playbooks/](playbooks/) directory contains comprehensive operational guides
 
 - [Agent Activation Prompts](playbooks/coordination/agent-activation-prompts.md)
 - [Handoff Templates](playbooks/coordination/handoff-templates.md)
+
+### Documentation Hub
+
+- [Start Here](docs/start-here.md)
+- [Choose an Agent](docs/choose-an-agent.md)
+- [Blueprint Schema Standard](docs/standards/blueprint-schema.md)
 
 ---
 
@@ -347,6 +419,7 @@ MIT License -- Use freely, commercially or personally. See [LICENSE](LICENSE) fo
 - **GitHub Discussions**: [Share your success stories](https://github.com/ambicuity/blueprint-of-agents/discussions)
 - **Issues**: [Report bugs or request features](https://github.com/ambicuity/blueprint-of-agents/issues)
 - **Contributing**: [Read the guide](CONTRIBUTING.md)
+- **Support**: [Get help and support channels](.github/SUPPORT.md)
 - **Security**: [Report vulnerabilities](SECURITY.md)
 
 ---
@@ -361,9 +434,11 @@ This repository is maintained by [Ritesh Rana](https://github.com/ambicuity) (`@
 
 1. Browse the agents above and find specialists for your needs
 2. Copy the agent blueprints to `~/.claude/agents/` for Claude Code integration
-3. Activate agents by referencing them in your coding sessions
-4. Customize agent personalities and workflows for your specific needs
-5. Contribute back to the community
+3. For cross-runtime setups, follow [docs/integrations/install-guides.md](docs/integrations/install-guides.md)
+4. Validate integration with `./tools/validate-integration.sh`
+5. Activate agents by referencing them in your coding sessions
+6. Customize agent personalities and workflows for your specific needs
+7. Contribute back to the community
 
 ---
 

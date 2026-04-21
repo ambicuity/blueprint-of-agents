@@ -1,4 +1,4 @@
-  Blueprint Orchestration Framework Quick-Start Guide
+# Blueprint Orchestration Framework Quick-Start Guide
 
 > **Get from zero to orchestrated multi-agent pipeline in 5 minutes.**
 
@@ -15,6 +15,29 @@
 | Build a complete product from scratch | **Blueprint Orchestration Framework-Full** | All | 12-24 weeks |
 | Build a feature or MVP | **Blueprint Orchestration Framework-Sprint** | 15-25 | 2-6 weeks |
 | Do a specific task (bug fix, campaign, audit) | **Blueprint Orchestration Framework-Micro** | 5-10 | 1-5 days |
+
+---
+
+ Cross-runtime setup and compatibility
+
+If your team runs multiple agent runtimes/providers, start here before activating orchestration prompts:
+
+1. Read [docs/integrations/install-guides.md](../docs/integrations/install-guides.md)
+2. Validate setup:
+
+```bash
+./tools/validate-integration.sh
+```
+
+3. Run install smoke checks:
+
+```bash
+./tools/smoke-test-install.sh
+```
+
+4. Review provider boundaries and matrix:
+   - [docs/integrations/agent-provider-taxonomy.md](../docs/integrations/agent-provider-taxonomy.md)
+   - [reports/provider-compatibility-matrix.md](../reports/provider-compatibility-matrix.md)
 
 ---
 
@@ -130,7 +153,7 @@ Evidence Collector verifies improvements.
 
 | Document | Purpose | Location |
 |----------|---------|----------|
-| **Master Strategy** | Complete Blueprint Orchestration Framework doctrine | `playbooks/orchestration-framework-strategy.md` |
+| **Master Strategy** | Complete Blueprint Orchestration Framework doctrine | `playbooks/orchestration-framework.md` |
 | **Phase 0 Playbook** | Discovery & intelligence | `playbooks/playbooks/phase-0-discovery.md` |
 | **Phase 1 Playbook** | Strategy & architecture | `playbooks/playbooks/phase-1-strategy.md` |
 | **Phase 2 Playbook** | Foundation & scaffolding | `playbooks/playbooks/phase-2-foundation.md` |
@@ -195,6 +218,7 @@ Exec Summary Gen.   │ Terminal Integration│ Report Distribution
 
 **Start with a mode. Follow the playbook. Trust the pipeline.**
 
-`playbooks/orchestration-framework-strategy.md` — The complete doctrine
+`playbooks/orchestration-framework.md` — The complete doctrine  
+`playbooks/index.md` — Browse all playbooks and runbooks
 
 </div>

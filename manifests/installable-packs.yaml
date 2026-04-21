@@ -1,0 +1,27 @@
+version: 1
+updated_at: 2026-04-20
+generated_by: tools/build-installable-index.sh
+packs:
+  - id: blueprint-library
+    name: Blueprint Library
+    stats:
+      blueprints: 61
+    source_paths:
+      - blueprints/
+    install_modes: [copy]
+
+  - id: orchestration-playbooks
+    name: Orchestration Playbooks
+    stats:
+      playbook_docs: 18
+      workflow_docs: 5
+    source_paths:
+      - playbooks/
+      - workflows/
+    install_modes: [reference, copy]
+
+  - id: portable-skill-templates
+    name: Portable Skill Templates
+    source_paths:
+      - templates/skills/
+    install_modes: [copy]
