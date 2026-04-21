@@ -36,7 +36,7 @@ This Code of Conduct applies within all community spaces, including GitHub Issue
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the maintainer at **contact@riteshrana.engineer**. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the maintainer at **contact@riteshrana.engineer**. If email delivery fails, open a private GitHub security advisory thread to request contact. Reports are acknowledged within 5 business days. All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 
@@ -74,4 +74,4 @@ This Code of Conduct is adapted from the [Contributor Covenant](https://www.cont
 
 Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
 
-For answers to common questions about this code of conduct, see the FAQ at [https://www.contributor-covenant.org/faq](https://www.contributor-covenant.org/faq).
+For answers to common questions about this code of conduct, refer to the Contributor Covenant FAQ on the official Contributor Covenant site.
