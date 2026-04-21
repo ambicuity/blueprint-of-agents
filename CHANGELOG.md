@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0](https://github.com/ambicuity/blueprint-of-agents/compare/v1.0.0...v1.1.0) (2026-04-21)
+
+
+### Features
+
+* **integrations:** add marketplace-style install matrix and validation ([6490f8a](https://github.com/ambicuity/blueprint-of-agents/commit/6490f8ae73f58840174e720684df314e61eb7670))
+
+
+### Bug Fixes
+
+* **ci:** harden markdown links and workflow checks ([0155888](https://github.com/ambicuity/blueprint-of-agents/commit/01558886df57411ff5fbe89210a8631084174450))
+* **ci:** resolve remaining markdownlint and link-check errors ([b7f30e3](https://github.com/ambicuity/blueprint-of-agents/commit/b7f30e3cbf2fe00d529255ea77cfceb1c932cb6a))
+* **ci:** stabilize links and catalog yaml lint ([f4d25c9](https://github.com/ambicuity/blueprint-of-agents/commit/f4d25c9cd2babcc90a3401a767f5ab83635d6759))
+
 ## [Unreleased]
 
 ## [1.0.0] - 2026-03-07
