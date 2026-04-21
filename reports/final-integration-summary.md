@@ -3,6 +3,7 @@
 Date: 2026-04-20
 
 ## 1) Concise integration summary
+
 Integrated a production-safe, additive integration layer into `blueprint-of-agents` that ports high-value patterns from `andrej-karpathy-skills`, `last30days-skill`, and `superpowers` without importing their runtime-heavy internals.
 
 Implemented:
@@ -14,6 +15,7 @@ Implemented:
 - Marketplace-style 8-platform install matrix (Blueprint-adapted) with explicit `Supported`/`Partial`/`Reference only` labels and canonical script fallbacks.
 
 ## 2) Files changed
+
 - `.env.example`
 - `README.md`
 - `playbooks/QUICKSTART.md`
@@ -37,6 +39,7 @@ Implemented:
 - `reports/final-integration-summary.md`
 
 ## 3) Source concepts adopted
+
 - **superpowers**:
   - cross-platform install conventions
   - skill discovery/packaging patterns
@@ -51,12 +54,14 @@ Implemented:
   - explicit missing-key failure/warning patterns
 
 ## 4) Source concepts rejected
+
 See `reports/adopted-vs-rejected-features.md` for full rationale. Summary:
 - last30days domain scraper/runtime engine: out of scope.
 - superpowers runtime hooks/mandatory behavior engine: too coupled for docs-first target.
 - direct source branding/content ports: rejected to preserve target architecture and intent.
 
 ## 5) Exact install steps
+
 1. Validate repo integration:
 ```bash
 ./tools/validate-integration.sh
@@ -76,6 +81,7 @@ See `reports/adopted-vs-rejected-features.md` for full rationale. Summary:
 ```
 
 ## 6) Exact validation steps run
+
 1. Regenerate optional pack index:
 ```bash
 ./tools/build-installable-index.sh
@@ -99,14 +105,17 @@ Result: `0 error(s), 0 warning(s)`.
 Result: passed for claude/codex/gemini/cursor/opencode in isolated HOME.
 
 ## 7) Follow-up recommendations
+
 1. Optionally add CI job to run `tools/validate-integration.sh` and `tools/smoke-test-install.sh` on PRs.
 2. Add a small curated set of ready-to-install skill packs under `packs/` once maintainers finalize naming.
 3. Consider extending `tools/lint-agents.sh` with optional strict mode for new schema sections.
 
 ## 8) Commit-readiness
+
 Changes are additive and isolated to new integration/docs/tooling surfaces plus two targeted doc updates. Existing blueprint corpus structure was preserved.
 
 ## 9) Documentation hardening update (this change)
+
 - `docs/integrations/install-guides.md` now includes:
   - Claude Code Official Marketplace
   - Claude Code Marketplace
@@ -118,3 +127,8 @@ Changes are additive and isolated to new integration/docs/tooling surfaces plus 
   - Gemini CLI
 - Each block includes install method, command/UI sequence, status label, and fallback via `tools/install-skill-pack.sh`.
 - Validation contract now enforces these headings and fallback references.
+- CI hardening added:
+  - markdown heading spacing normalized to satisfy MD022 without relaxing lint rules
+  - dead/broken links fixed or removed (including placeholder and disabled-discussions targets)
+  - Release Please workflow now logs a permission warning and fails soft when PR-creation permission is disabled
+  - CodeQL language target aligned to repo reality (`actions`)

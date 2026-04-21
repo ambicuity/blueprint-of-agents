@@ -1,4 +1,4 @@
- Orchestration Framework Spatial: Full Agency Discovery Exercise
+# Orchestration Framework Spatial: Full Agency Discovery Exercise
 
 > **Exercise type:** Multi-agent product discovery
 > **Date:** March 5, 2026
@@ -8,24 +8,24 @@
 
 ---
 
- Table of Contents
+## Table of Contents
 
-1. [The Opportunity](1-the-opportunity)
-2. [Market Validation](2-market-validation)
-3. [Technical Architecture](3-technical-architecture)
-4. [Brand Strategy](4-brand-strategy)
-5. [Go-to-Market & Growth](5-go-to-market--growth)
-6. [Customer Support Blueprint](6-customer-support-blueprint)
-7. [UX Research & Design Direction](7-ux-research--design-direction)
-8. [Project Execution Plan](8-project-execution-plan)
-9. [Spatial Interface Architecture](9-spatial-interface-architecture)
-10. [Cross-Agent Synthesis](10-cross-agent-synthesis)
+1. [The Opportunity](#1-the-opportunity)
+2. [Market Validation](#2-market-validation)
+3. [Technical Architecture](#3-technical-architecture)
+4. [Brand Strategy](#4-brand-strategy)
+5. [Go-to-Market & Growth](#5-go-to-market--growth)
+6. [Customer Support Blueprint](#6-customer-support-blueprint)
+7. [UX Research & Design Direction](#7-ux-research--design-direction)
+8. [Project Execution Plan](#8-project-execution-plan)
+9. [Spatial Interface Architecture](#9-spatial-interface-architecture)
+10. [Cross-Agent Synthesis](#10-cross-agent-synthesis)
 
 ---
 
- 1. The Opportunity
+## 1. The Opportunity
 
- How It Was Found
+### How It Was Found
 
 Web research across multiple sources identified three converging trends:
 
@@ -33,31 +33,30 @@ Web research across multiple sources identified three converging trends:
 - **Spatial computing** (Vision Pro, WebXR) is maturing but lacks killer enterprise apps
 - Every existing AI workflow tool (LangSmith, n8n, Flowise, CrewAI) is a **flat 2D dashboard**
 
- The Concept: Orchestration Framework Spatial
+### The Concept: Orchestration Framework Spatial
 
 An AI Agent Command Center in spatial computing -- a VisionOS + WebXR application that provides an immersive 3D command center for orchestrating, monitoring, and interacting with AI agents. Users visualize agent pipelines as 3D node graphs, monitor real-time outputs in spatial panels, build workflows with drag-and-drop in 3D space, and collaborate in shared spatial environments.
 
- Why This Agency Is Uniquely Positioned
+### Why This Agency Is Uniquely Positioned
 
 Blueprint of Agents has deep spatial computing expertise (XR developers, VisionOS engineers, Metal specialists, interface architects) alongside a full engineering, design, marketing, and operations stack -- a rare combination for a product that demands both spatial computing mastery and enterprise software rigor.
 
- Sources
+### Sources
 
 - [Profitable SaaS Ideas 2026 (273K+ Reviews)](https://bigideasdb.com/profitable-saas-micro-saas-ideas-2026)
 - [2026 SaaS and AI Revolution: 20 Top Trends](https://fungies.io/the-2026-saas-and-ai-revolution-20-top-trends/)
-- [Top 21 Underserved Markets 2026](https://mktclarity.com/blogs/news/list-underserved-niches)
 - [Fastest Growing Products 2026 - G2](https://www.g2.com/best-software-companies/fastest-growing)
 - [PwC 2026 AI Business Predictions](https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-predictions.html)
 
 ---
 
- 2. Market Validation
+## 2. Market Validation
 
 **Agent:** Product Trend Researcher
 
- Verdict: CONDITIONAL GO -- 2D-First, Spatial-Second
+**Verdict:** CONDITIONAL GO -- 2D-First, Spatial-Second
 
- Market Size
+### Market Size
 
 | Segment | 2026 Value | Growth |
 |---------|-----------|--------|
@@ -66,7 +65,7 @@ Blueprint of Agents has deep spatial computing expertise (XR developers, VisionO
 | Extended Reality | $10.64B | 40.95% CAGR |
 | Spatial Computing (broad) | $170-220B | Varies by definition |
 
- Competitive Landscape
+### Competitive Landscape
 
 **AI Agent Orchestration (all 2D):**
 
@@ -87,21 +86,21 @@ Blueprint of Agents has deep spatial computing expertise (XR developers, VisionO
 
 **The gap:** Products are either spatial-but-not-AI-focused, or AI-focused-but-flat-2D. No product sits at the intersection.
 
- Vision Pro Reality Check
+### Vision Pro Reality Check
 
 - Installed base: ~1M units globally (sales declined 95% from launch)
 - Apple has shifted focus to lightweight AR glasses
 - Only ~3,000 VisionOS-specific apps exist
 - **Implication:** Do NOT lead with VisionOS. Lead with web, add WebXR, native VisionOS last.
 
- WebXR as the Distribution Unlock
+### WebXR as the Distribution Unlock
 
 - Safari adopted WebXR Device API in late 2025
 - 40% increase in WebXR adoption in 2026
 - WebGPU delivers near-native rendering in browsers
 - Android XR supports WebXR and OpenXR standards
 
- Target Personas and Pricing
+### Target Personas and Pricing
 
 | Tier | Price | Target |
 |------|-------|--------|
@@ -110,13 +109,13 @@ Blueprint of Agents has deep spatial computing expertise (XR developers, VisionO
 | Team | $249/user/month | Mid-market AI teams (unlimited agents, analytics) |
 | Enterprise | Custom ($2K-10K/mo) | Large enterprises (SSO, RBAC, on-prem, SLA) |
 
- Recommended Phased Strategy
+### Recommended Phased Strategy
 
 1. **Months 1-6:** Build a premium 2D web dashboard with Three.js 2.5D capabilities. Target: 50 paying teams, $60K MRR.
 2. **Months 6-12:** Add optional WebXR spatial mode (browser-based). Target: 200 teams, $300K MRR.
 3. **Months 12-18:** Native VisionOS app only if spatial demand is validated. Target: 500 teams, $1M+ MRR.
 
- Key Risks
+### Key Risks
 
 | Risk | Severity |
 |------|----------|
@@ -126,7 +125,7 @@ Blueprint of Agents has deep spatial computing expertise (XR developers, VisionO
 | Enterprise spatial computing adoption still early | MODERATE |
 | Integration complexity across AI frameworks | MODERATE |
 
- Sources
+### Sources
 
 - [MarketsandMarkets - AI Orchestration Market](https://www.marketsandmarkets.com/Market-Reports/ai-orchestration-market-148121911.html)
 - [Deloitte - AI Agent Orchestration Predictions 2026](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/ai-agent-orchestration.html)
@@ -136,11 +135,11 @@ Blueprint of Agents has deep spatial computing expertise (XR developers, VisionO
 
 ---
 
- 3. Technical Architecture
+## 3. Technical Architecture
 
 **Agent:** Backend Architect
 
- System Overview
+### System Overview
 
 An 8-service architecture with clear ownership boundaries, designed for horizontal scaling and provider-agnostic AI integration.
 
@@ -172,7 +171,7 @@ An 8-service architecture with clear ownership boundaries, designed for horizont
 +------------------------------------------------------------------+
 ```
 
- Tech Stack
+### Tech Stack
 
 | Component | Technology | Rationale |
 |-----------|------------|-----------|
@@ -184,7 +183,7 @@ An 8-service architecture with clear ownership boundaries, designed for horizont
 | Collaboration | Yjs (CRDT) + WebRTC | Conflict-free concurrent 3D graph editing |
 | Primary Database | PostgreSQL 16 | JSONB for flexible configs, Row-Level Security for tenant isolation |
 
- Core Data Model
+### Core Data Model
 
 14 tables covering:
 - **Identity & Access:** users, workspaces, team_memberships, api_keys
@@ -195,7 +194,7 @@ An 8-service architecture with clear ownership boundaries, designed for horizont
 - **Billing:** subscriptions, usage_records
 - **Audit:** audit_log (append-only)
 
- Node Type Registry
+### Node Type Registry
 
 ```text
 Built-in Node Types:
@@ -212,7 +211,7 @@ Built-in Node Types:
   delay             -- Timed pause
 ```
 
- WebSocket Channels
+### WebSocket Channels
 
 Real-time streaming via WSS with:
 - Per-channel sequence numbers for ordering
@@ -250,7 +249,7 @@ Real-time streaming via WSS with:
 
 ---
 
- 4. Brand Strategy
+## 4. Brand Strategy
 
 **Agent:** Brand Guardian
 
@@ -349,7 +348,7 @@ Three directions for exploration:
 
 ---
 
- 5. Go-to-Market & Growth
+## 5. Go-to-Market & Growth
 
 **Agent:** Growth Hacker
 
@@ -432,7 +431,7 @@ Strategy: 14-day reverse trial (Pro features, then downgrade to Free). Target 5-
 - **Tier 3 (Platform):** Apple -- Vision Pro developer kit, App Store featuring, WWDC
 - **Tier 4 (Ecosystem):** GitHub, Hugging Face, Docker -- developer platform integrations
 
- Sources
+### Sources
 
 - [AI Orchestration Market Size - MarketsandMarkets](https://www.marketsandmarkets.com/Market-Reports/ai-orchestration-market-148121911.html)
 - [Spatial Computing Market - Precedence Research](https://www.precedenceresearch.com/spatial-computing-market)
@@ -441,7 +440,7 @@ Strategy: 14-day reverse trial (Pro features, then downgrade to Free). Target 5-
 
 ---
 
- 6. Customer Support Blueprint
+## 6. Customer Support Blueprint
 
 **Agent:** Support Responder
 
@@ -525,7 +524,7 @@ Blueprint Orchestration Framework SPATIAL DISCORD
 
 ---
 
- 7. UX Research & Design Direction
+## 7. UX Research & Design Direction
 
 **Agent:** UX Researcher
 
@@ -609,7 +608,7 @@ Spatial adds value for **structural** tasks (placing, connecting, rearranging no
 
 ---
 
- 8. Project Execution Plan
+## 8. Project Execution Plan
 
 **Agent:** Project Shepherd
 
@@ -677,7 +676,7 @@ Spatial adds value for **structural** tasks (placing, connecting, rearranging no
 
 ---
 
- 9. Spatial Interface Architecture
+## 9. Spatial Interface Architecture
 
 **Agent:** XR Interface Architect
 
@@ -810,7 +809,7 @@ All transitions serve wayfinding. Maximum 600ms for major transitions, 200ms for
 
 ---
 
- 10. Cross-Agent Synthesis
+## 10. Cross-Agent Synthesis
 
  Points of Agreement Across All 8 Agents
 

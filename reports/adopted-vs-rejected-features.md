@@ -3,6 +3,7 @@
 Date: 2026-04-20
 
 ## Adopted (adapted)
+
 1. Cross-platform install conventions and docs-first compatibility model (from superpowers).
 2. Skill packaging conventions and metadata templates (`SKILL.md`, plugin and marketplace manifests).
 3. Reusable workflow capability bundles (brainstorm/plan/execute/review) mapped into playbook language.
@@ -11,6 +12,7 @@ Date: 2026-04-20
 6. Install safety conventions: dry-run support, explicit target paths, no destructive defaults.
 
 ## Rejected (with rationale)
+
 1. Domain-specific scraper/research runtime from last30days.
    - Reason: out of scope for a blueprint/playbook repository.
 2. Runtime-heavy orchestration internals and mandatory hooks from superpowers.

@@ -3,6 +3,7 @@
 This matrix separates model providers, workflow tools, and runtimes.
 
 ## Capability matrix
+
 | Name | Class | Required env | Optional env | Supported workflows | Fallback / degradation |
 |---|---|---|---|---|---|
 | Claude (Anthropic) | model-provider | `ANTHROPIC_API_KEY` | `ANTHROPIC_MODEL` | Blueprint prompting, orchestration, skill usage | If missing, switch to Gemini/OpenAI-compatible where available |
@@ -15,6 +16,7 @@ This matrix separates model providers, workflow tools, and runtimes.
 | OpenCode | runtime | none | `OPENCODE_CONFIG_DIR` | Plugin + skills workflows | If absent, use Claude/Codex/Gemini setup |
 
 ## Validation policy
+
 - Required env keys are validated by `tools/validate-integration.sh`.
 - Missing optional env keys never hard-fail validation.
 - Missing provider keys produce actionable warnings, not silent failures.

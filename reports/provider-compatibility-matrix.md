@@ -14,6 +14,7 @@ Date: 2026-04-20
 | OpenCode | runtime | none | `OPENCODE_CONFIG_DIR` | Yes |
 
 ## Notes
+
 - Cursor is represented as workflow tooling, not a model API provider.
 - Missing provider keys should degrade gracefully to docs-only and alternative providers.
 - Validation checks live in `tools/validate-integration.sh`.

@@ -91,6 +91,7 @@ Browse the agents below and copy or adapt the ones you need.
 This repository now includes an additive integration layer for multi-runtime and multi-provider workflows.
 
 ### Quick links
+
 - [Integration Docs](docs/integrations/README.md)
 - [Install Guides](docs/integrations/install-guides.md)
 - [Platform Install Matrix](docs/integrations/install-guides.md#platform-install-matrix)
@@ -98,6 +99,7 @@ This repository now includes an additive integration layer for multi-runtime and
 - [Installable Pack Index](manifests/installable-packs.yaml)
 
 ### Runtime targets
+
 - Claude Code
 - Codex CLI
 - Gemini CLI
@@ -106,20 +108,24 @@ This repository now includes an additive integration layer for multi-runtime and
 - Plus documented marketplace-style reference coverage for Codex App and Copilot CLI.
 
 ### Provider model
+
 - Model providers: Anthropic (Claude), Gemini, OpenAI-compatible APIs
 - Workflow tools: Cursor
 - Runtimes: Claude Code, Codex CLI, Gemini CLI, OpenCode
 
 ### Validate and smoke-test
+
 ```bash
 ./tools/validate-integration.sh
 ./tools/smoke-test-install.sh
 ```
 
 ### Migration note
+
 - Existing `cp -r blueprint-of-agents/blueprints/* ~/.claude/agents/` workflow remains valid and supported.
 
 ### Install with dry-run first
+
 ```bash
 ./tools/install-skill-pack.sh --target claude --pack blueprints --dry-run
 ./tools/install-skill-pack.sh --target codex --pack templates --dry-run
@@ -416,7 +422,7 @@ MIT License -- Use freely, commercially or personally. See [LICENSE](LICENSE) fo
 
 ## Community
 
-- **GitHub Discussions**: [Share your success stories](https://github.com/ambicuity/blueprint-of-agents/discussions)
+- **Community feedback**: [Share your success stories via Issues](https://github.com/ambicuity/blueprint-of-agents/issues)
 - **Issues**: [Report bugs or request features](https://github.com/ambicuity/blueprint-of-agents/issues)
 - **Contributing**: [Read the guide](CONTRIBUTING.md)
 - **Support**: [Get help and support channels](.github/SUPPORT.md)

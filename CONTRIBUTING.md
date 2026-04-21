@@ -2,7 +2,7 @@
 
 First off -- **thank you** for taking the time to contribute.
 
-> **TL;DR Quick Start (3 steps):**
+> **TL;DR Quick Start (5 steps):**
 > 1. **Find** an issue tagged [`good first issue`](https://github.com/ambicuity/blueprint-of-agents/labels/good%20first%20issue) and comment `/assign`
 > 2. **Fork** the repository, create a branch, make your changes
 > 3. **Submit** a PR with `Fixes #<issue-number>` in the description
@@ -10,6 +10,23 @@ First off -- **thank you** for taking the time to contribute.
 > Full details in the sections below.
 
 Blueprint of Agents is a curated collection of production-grade AI agent blueprints. Every contribution -- whether it is adding a new agent, improving an existing one, fixing documentation, or sharing success stories -- directly helps developers build better AI-assisted workflows.
+
+---
+
+## First PR in 15 Minutes
+
+1. Pick an issue labeled [`good first issue`](https://github.com/ambicuity/blueprint-of-agents/labels/good%20first%20issue).
+2. Comment `/assign` on the issue.
+3. Edit only scoped files.
+4. Run:
+
+```bash
+pre-commit run --all-files
+```
+
+5. Open a PR with Conventional Commit title and include `Fixes #<issue>`.
+
+Use [`.github/labels.md`](.github/labels.md) to understand the label taxonomy before choosing work.
 
 ---
 
@@ -42,7 +59,7 @@ We organize work into clear tiers:
 
 - **Bug report** or **missing agent**: Use our [Issue Templates](https://github.com/ambicuity/blueprint-of-agents/issues/new/choose).
 - **Translation**: Add a translated README (e.g. `README.zh-CN.md`).
-- **Success stories**: Share how you used these agents in [Discussions](https://github.com/ambicuity/blueprint-of-agents/discussions).
+- **Success stories**: Share how you used these agents by opening an [Issue](https://github.com/ambicuity/blueprint-of-agents/issues).
 
 ---
 
@@ -409,7 +426,7 @@ Use the structured issue templates:
 - **[Improve Agent](https://github.com/ambicuity/blueprint-of-agents/issues/new?template=improve_agent.yml)** -- suggest improvements to an existing agent
 - **[Architecture Proposal](https://github.com/ambicuity/blueprint-of-agents/issues/new?template=architecture_proposal.yml)** -- major structural changes
 
-> Not sure if it is an issue? Start a [Discussion](https://github.com/ambicuity/blueprint-of-agents/discussions) instead.
+> Not sure if it is an issue? Open a general [Issue](https://github.com/ambicuity/blueprint-of-agents/issues) with context and maintainers will route it.
 
 > **Security issues**: Please email `contact@riteshrana.engineer` -- **do not** open a public issue. See [SECURITY.md](./SECURITY.md).
 

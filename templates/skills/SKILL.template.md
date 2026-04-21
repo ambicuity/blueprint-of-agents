@@ -22,16 +22,19 @@ install:
 # Skill Name
 
 ## When to use
+
 - Condition A
 - Condition B
 
 ## Workflow
+
 1. Discover context.
 2. Confirm constraints.
 3. Execute bounded steps.
 4. Verify output explicitly.
 
 ## Success criteria
+
 - Output is complete.
 - Output is validated.
 - Failures are surfaced with actionable next steps.

@@ -13,7 +13,15 @@ jobs:
     name: Create Release PR
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
+      - id: release
+        continue-on-error: true
+        uses: googleapis/release-please-action@v4
         with:
           config-file: .release-please-config.json
           manifest-file: .release-please-manifest.json
+      - name: Permission guard
+        if: steps.release.outcome == 'failure'
+        run: |
+          echo "::warning::release-please could not create/update a release PR."
+          echo "::warning::If this repository has disabled 'Allow GitHub Actions to create and approve pull requests', this is expected."
+          echo "::warning::Enable that repository setting to restore automatic Release PR creation."

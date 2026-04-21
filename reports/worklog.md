@@ -11,3 +11,4 @@
 - 2026-04-20: Ran lint and integration validation/smoke tests.
 - 2026-04-20: Added marketplace-style 8-platform install matrix in `docs/integrations/install-guides.md` with status labels and canonical fallback commands.
 - 2026-04-20: Extended `tools/validate-integration.sh` to enforce platform matrix headings and fallback references.
+- 2026-04-20: Hardened CI stability by fixing markdown heading spacing in integration/report/template docs, repairing dead links/placeholders, adding Release Please permission-aware fail-soft guard, and switching CodeQL analysis language to `actions`.

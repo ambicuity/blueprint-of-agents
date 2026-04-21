@@ -3,6 +3,7 @@
 This repository keeps workflow patterns docs-first and runtime-agnostic.
 
 ## Bundle model
+
 | Bundle | Purpose | Source inspiration | Target adaptation |
 |---|---|---|---|
 | Brainstorm | Clarify intent and constraints before execution | superpowers brainstorming discipline | Use playbooks + prompt templates; no runtime lock-in |
@@ -11,6 +12,7 @@ This repository keeps workflow patterns docs-first and runtime-agnostic.
 | Review | Validate correctness, quality, and readiness | superpowers review discipline + Karpathy guardrails | Use Evidence Collector + Reality Checker workflows |
 
 ## Guardrail layer
+
 Adopted from karpathy-guidelines:
 - Think before coding
 - Simplicity first
@@ -20,5 +22,6 @@ Adopted from karpathy-guidelines:
 Template: `templates/skills/guardrails-karpathy.template.md`
 
 ## Intended usage
+
 - Treat bundles as reusable operating modes across runtimes.
 - Keep behavior portable by describing intent and checks, not runtime-specific hooks.

@@ -7,6 +7,7 @@ Use the scripts in `tools/` to install and validate portable packs.
 This matrix mirrors common marketplace/install surfaces across major runtimes and tools.
 
 ### Claude Code Official Marketplace
+
 - **Status**: Reference only
 - **Install method**: Anthropic official plugin marketplace UI/command surface
 - **Command sequence**:
@@ -21,6 +22,7 @@ This matrix mirrors common marketplace/install surfaces across major runtimes an
 ```
 
 ### Claude Code Marketplace
+
 - **Status**: Reference only
 - **Install method**: Custom plugin marketplace registration and install
 - **Command sequence**:
@@ -36,6 +38,7 @@ This matrix mirrors common marketplace/install surfaces across major runtimes an
 ```
 
 ### OpenAI Codex CLI
+
 - **Status**: Partial
 - **Install method**: Plugin search UX is platform-native; this repo currently ships script-based install as canonical path.
 - **Command sequence (marketplace-style reference)**:
@@ -51,6 +54,7 @@ Select Install Plugin
 ```
 
 ### OpenAI Codex App
+
 - **Status**: Reference only
 - **Install method**: App plugin sidebar flow
 - **UI flow**:
@@ -65,6 +69,7 @@ Select Install Plugin
 ```
 
 ### Cursor (Plugin Marketplace)
+
 - **Status**: Partial
 - **Install method**: Cursor marketplace/chat plugin flow
 - **Command sequence (marketplace-style reference)**:
@@ -79,6 +84,7 @@ Select Install Plugin
 ```
 
 ### OpenCode
+
 - **Status**: Partial
 - **Install method**: OpenCode plugin reference flow
 - **Command sequence (reference)**:
@@ -92,6 +98,7 @@ Fetch and follow instructions from https://raw.githubusercontent.com/ambicuity/b
 ```
 
 ### GitHub Copilot CLI
+
 - **Status**: Reference only
 - **Install method**: Copilot plugin marketplace commands
 - **Command sequence (reference)**:
@@ -107,6 +114,7 @@ copilot plugin install blueprint-of-agents@blueprint-of-agents-marketplace
 ```
 
 ### Gemini CLI
+
 - **Status**: Partial
 - **Install method**: Gemini extensions install/update flow
 - **Command sequence (marketplace-style reference)**:
@@ -129,11 +137,13 @@ gemini extensions update blueprint-of-agents
 | Canonical install path | `tools/install-skill-pack.sh` remains the canonical fallback install mechanism. |
 
 ## 1) Validate integration files
+
 ```bash
 ./tools/validate-integration.sh
 ```
 
 ## 2) Preview install actions (dry-run)
+
 ```bash
 ./tools/install-skill-pack.sh --target claude --pack blueprints --dry-run
 ./tools/install-skill-pack.sh --target codex --pack templates --dry-run
@@ -143,16 +153,19 @@ gemini extensions update blueprint-of-agents
 ```
 
 ## 3) Run install
+
 ```bash
 ./tools/install-skill-pack.sh --target claude --pack blueprints
 ```
 
 ## 4) Run smoke tests with isolated HOME
+
 ```bash
 ./tools/smoke-test-install.sh
 ```
 
 ## Install targets
+
 - `claude`: installs blueprint markdown files into `~/.claude/agents/blueprint-of-agents/`
 - `codex`: installs templates into `~/.agents/skills/blueprint-of-agents/`
 - `gemini`: installs templates into `${GEMINI_EXTENSION_DIR:-~/.gemini/extensions/blueprint-of-agents}/skills/`
@@ -160,6 +173,7 @@ gemini extensions update blueprint-of-agents
 - `opencode`: installs templates into `${OPENCODE_CONFIG_DIR:-~/.config/opencode}/skills/blueprint-of-agents/`
 
 ## Safety defaults
+
 - Dry-run is explicit and supported for every action.
 - No destructive actions are performed.
 - Existing files are not removed by installer scripts.
