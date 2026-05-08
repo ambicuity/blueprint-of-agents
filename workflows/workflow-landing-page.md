@@ -100,6 +100,22 @@ Evaluate:
 Give me specific changes, not general advice.
 ```
 
+**Step 4 — QA + Handoff Check**
+
+```text
+Activate Evidence Collector.
+
+Validate:
+1. Responsive layout on mobile/tablet/desktop
+2. CTA visibility and form usability
+3. Accessibility basics (heading order, labels, focus states)
+
+Return:
+- PASS/FAIL
+- screenshot evidence
+- exact fixes if failed
+```
+
  Timeline
 
 | Time | Activity | Agent |
@@ -117,3 +133,5 @@ Give me specific changes, not general advice.
 2. **Merge point**: Frontend Developer needs both outputs before starting
 3. **Feedback loop**: Growth Hacker reviews, then Frontend Developer applies changes
 4. **Time-boxed**: Each step has a clear timebox to prevent scope creep
+
+5. **Quality gate**: Evidence Collector verifies before shipping

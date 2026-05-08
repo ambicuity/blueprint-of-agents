@@ -1,30 +1,27 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
- Validates agent markdown files:
-   1. YAML frontmatter must exist with name, description, color (ERROR)
-   2. Recommended sections checked but only warned (WARN)
-   3. File must have meaningful content
-
- Usage: ./tools/lint-agents.sh [file ...]
-   If no files given, scans all agent directories.
+# Lint blueprint markdown files against the repository schema baseline.
+#
+# Enforced (errors):
+# 1) YAML frontmatter exists and includes: name, description, color
+# 2) H1-style title exists in body (warning)
+#
+# Reported (warnings):
+# 1) Missing required schema sections:
+#    - When To Use
+#    - Core Mission
+#    - Workflow
+#    - Success Metrics
+# 2) Very short body (< 50 words)
+#
+# Usage:
+#   ./tools/lint-agents.sh [file ...]
+#   ./tools/lint-agents.sh --changed
 
 set -euo pipefail
 
-AGENT_DIRS=(
-  design
-  engineering
-  marketing
-  product
-  project-management
-  testing
-  support
-  spatial-computing
-  specialized
-  strategy
-)
-
 REQUIRED_FRONTMATTER=("name" "description" "color")
-RECOMMENDED_SECTIONS=("Identity" "Core Mission" "Critical Rules")
+REQUIRED_SCHEMA_SECTIONS=("When To Use" "Core Mission" "Workflow" "Success Metrics")
 
 errors=0
 warnings=0
@@ -32,71 +29,88 @@ warnings=0
 lint_file() {
   local file="$1"
 
-   1. Check frontmatter delimiters
-  local first_line
-  first_line=$(head -1 "$file")
-  if [[ "$first_line" != "---" ]]; then
-    echo "ERROR $file: missing frontmatter opening ---"
+  if [[ ! -f "$file" ]]; then
+    return
+  fi
+
+  if [[ "$(head -1 "$file")" != "---" ]]; then
+    echo "ERROR $file: missing frontmatter opening '---'"
     errors=$((errors + 1))
     return
   fi
 
-   Extract frontmatter (between first and second ---)
+  local fm_end
+  fm_end=$(awk 'NR>1 && /^---$/ {print NR; exit}' "$file")
+  if [[ -z "$fm_end" ]]; then
+    echo "ERROR $file: missing frontmatter closing '---'"
+    errors=$((errors + 1))
+    return
+  fi
+
   local frontmatter
-  frontmatter=$(awk 'NR==1{next} /^---$/{exit} {print}' "$file")
-
+  frontmatter=$(sed -n "2,$((fm_end - 1))p" "$file")
   if [[ -z "$frontmatter" ]]; then
-    echo "ERROR $file: empty or malformed frontmatter"
+    echo "ERROR $file: empty frontmatter"
     errors=$((errors + 1))
     return
   fi
 
-   2. Check required frontmatter fields
   for field in "${REQUIRED_FRONTMATTER[@]}"; do
-    if ! echo "$frontmatter" | grep -qE "^${field}:"; then
+    if ! grep -qE "^${field}:" <<<"$frontmatter"; then
       echo "ERROR $file: missing frontmatter field '${field}'"
       errors=$((errors + 1))
     fi
   done
 
-   3. Check recommended sections (warn only)
   local body
-  body=$(awk 'BEGIN{n=0} /^---$/{n++; next} n>=2{print}' "$file")
+  body=$(tail -n +"$((fm_end + 1))" "$file")
 
-  for section in "${RECOMMENDED_SECTIONS[@]}"; do
-    if ! echo "$body" | grep -qi "$section"; then
-      echo "WARN  $file: missing recommended section '${section}'"
+  if ! grep -qE "^# " <<<"$body"; then
+    # Backward-compatible fallback for legacy blueprint format.
+    if ! grep -qE "^[[:space:]]*[A-Za-z].*Agent" <<<"$body"; then
+      echo "WARN  $file: missing explicit H1 heading in body"
+      warnings=$((warnings + 1))
+    fi
+  fi
+
+  for section in "${REQUIRED_SCHEMA_SECTIONS[@]}"; do
+    if ! grep -qiE "^## +${section}$" <<<"$body"; then
+      echo "WARN  $file: missing schema section '${section}'"
       warnings=$((warnings + 1))
     fi
   done
 
-   4. Check file has meaningful content
-  if [[ $(echo "$body" | wc -w) -lt 50 ]]; then
+  if [[ "$(wc -w <<<"$body" | tr -d ' ')" -lt 50 ]]; then
     echo "WARN  $file: body seems very short (< 50 words)"
     warnings=$((warnings + 1))
   fi
 }
 
- Collect files to lint
+collect_files() {
+  if [[ "${1-}" == "--changed" ]]; then
+    git diff --name-only --diff-filter=ACMR origin/main -- 'blueprints/**/*.md' | sed '/^$/d'
+    return
+  fi
+
+  if [[ "$#" -gt 0 ]]; then
+    printf '%s\n' "$@"
+    return
+  fi
+
+  find blueprints -mindepth 2 -maxdepth 2 -type f -name "*.md" | sort
+}
+
 files=()
-if [[ $ -gt 0 ]]; then
-  files=("$@")
-else
-  for dir in "${AGENT_DIRS[@]}"; do
-    if [[ -d "$dir" ]]; then
-      while IFS= read -r f; do
-        files+=("$f")
-      done < <(find "$dir" -maxdepth 1 -name "*.md" -type f | sort)
-    fi
-  done
+while IFS= read -r line; do
+  files+=("$line")
+done < <(collect_files "$@")
+
+if [[ "${#files[@]}" -eq 0 ]]; then
+  echo "No blueprint markdown files found."
+  exit 0
 fi
 
-if [[ ${files[@]} -eq 0 ]]; then
-  echo "No agent files found."
-  exit 1
-fi
-
-echo "Linting ${files[@]} agent files..."
+echo "Linting ${#files[@]} blueprint file(s)..."
 echo ""
 
 for file in "${files[@]}"; do
@@ -104,12 +118,12 @@ for file in "${files[@]}"; do
 done
 
 echo ""
-echo "Results: ${errors} error(s), ${warnings} warning(s) in ${files[@]} files."
+echo "Results: ${errors} error(s), ${warnings} warning(s)."
 
-if [[ $errors -gt 0 ]]; then
+if [[ "$errors" -gt 0 ]]; then
   echo "FAILED: fix the errors above before merging."
   exit 1
-else
-  echo "PASSED"
-  exit 0
 fi
+
+echo "PASSED"
+exit 0
