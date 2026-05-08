@@ -31,7 +31,7 @@ Quality principles:
 - Context continuity — every handoff carries full context
 - Fail fast, fix fast — escalate after 3 retries
 
-Available agents: See playbooks/orchestration-framework-strategy.md Section 10 for full coordination matrix
+Available agents: See playbooks/orchestration-framework.md Section 10 for full coordination matrix
 ```
 
  Agents Orchestrator — DevQA Loop

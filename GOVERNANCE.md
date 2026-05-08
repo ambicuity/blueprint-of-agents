@@ -35,3 +35,18 @@ We value:
 ## Conflict Resolution
 
 Disputes or disagreements regarding technical direction or community conduct will be resolved by the BDFL, prioritizing the long-term health and stability of the project. If you have concerns about the governance process or a specific decision, please open an issue or start a GitHub Discussion to address it constructively.
+
+
+## RFC and Decision Log
+
+Major structural and policy changes should be proposed through an `Architecture Proposal` issue and tracked with a decision summary in the issue thread.
+
+## Escalation and Response SLAs
+
+- Governance clarification request: response target within 5 business days
+- Architecture proposal triage: response target within 7 business days
+- Conflict escalation acknowledgement: within 72 hours
+
+## Maintainer Review Cadence
+
+The maintainer aims to run quarterly documentation quality reviews and update project standards as the repository evolves.

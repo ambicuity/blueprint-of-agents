@@ -38,3 +38,6 @@ To keep this sustainable as a solo-maintained project, the following are explici
 - **Integration with proprietary tools** -- Agents are designed for open, general-purpose use
 
 > If you are unsure whether your request is in scope, start a [Discussion](https://github.com/ambicuity/blueprint-of-agents/discussions) before opening an issue.
+
+
+Label taxonomy: see [labels.md](labels.md).
