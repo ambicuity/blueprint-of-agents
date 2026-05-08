@@ -24,6 +24,14 @@
   Shortcut: title the PR "@coderabbitai" and the bot renames it correctly.
 -->
 
+## First PR Short Path
+
+If this is your first contribution, keep it simple:
+
+1. Link issue (`Fixes #...`)
+2. Describe exactly what changed
+3. Run `pre-commit run --all-files`
+
 ## Linked Issue
 
 Fixes #
