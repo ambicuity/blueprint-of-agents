@@ -1,34 +1,34 @@
-  Blueprint Orchestration Framework
+# Blueprint Orchestration Framework
 
- Blueprint of Agents's Complete Operational Playbook for Multi-Agent Orchestration
+A complete operational playbook for multi-agent orchestration.
 
 > **Blueprint Orchestration Framework** transforms Blueprint of Agents's independent AI specialists into a synchronized intelligence network. This is not a prompt collection — it is a **deployment doctrine** that turns Blueprint of Agents into a force multiplier for any project, product, or organization.
 
 ---
 
- Table of Contents
+## Table of Contents
 
-1. [Strategic Foundation](1-strategic-foundation)
-2. [The Blueprint Orchestration Framework Operating Model](2-the-orchestration-framework-operating-model)
-3. [Phase 0 — Intelligence & Discovery](3-phase-0--intelligence--discovery)
-4. [Phase 1 — Strategy & Architecture](4-phase-1--strategy--architecture)
-5. [Phase 2 — Foundation & Scaffolding](5-phase-2--foundation--scaffolding)
-6. [Phase 3 — Build & Iterate](6-phase-3--build--iterate)
-7. [Phase 4 — Quality & Hardening](7-phase-4--quality--hardening)
-8. [Phase 5 — Launch & Growth](8-phase-5--launch--growth)
-9. [Phase 6 — Operate & Evolve](9-phase-6--operate--evolve)
-10. [Agent Coordination Matrix](10-agent-coordination-matrix)
-11. [Handoff Protocols](11-handoff-protocols)
-12. [Quality Gates](12-quality-gates)
-13. [Risk Management](13-risk-management)
-14. [Success Metrics](14-success-metrics)
-15. [Quick-Start Activation Guide](15-quick-start-activation-guide)
+1. Strategic Foundation
+2. The Blueprint Orchestration Framework Operating Model
+3. Phase 0 - Intelligence and Discovery
+4. Phase 1 - Strategy and Architecture
+5. Phase 2 - Foundation and Scaffolding
+6. Phase 3 - Build and Iterate
+7. Phase 4 - Quality and Hardening
+8. Phase 5 - Launch and Growth
+9. Phase 6 - Operate and Evolve
+10. Agent Coordination Matrix
+11. Handoff Protocols
+12. Quality Gates
+13. Risk Management
+14. Success Metrics
+15. Quick-Start Activation Guide
 
 ---
 
- 1. Strategic Foundation
+## 1. Strategic Foundation
 
- 1.1 What Blueprint Orchestration Framework Solves
+### 1.1 What Blueprint Orchestration Framework Solves
 
 Individual agents are powerful. But without coordination, they produce:
 - Conflicting architectural decisions
@@ -43,7 +43,7 @@ Individual agents are powerful. But without coordination, they produce:
 - **How** quality is verified before advancement
 - **Why** each agent exists in the pipeline (no passengers)
 
- 1.2 Core Principles
+### 1.2 Core Principles
 
 | Principle | Description |
 |-----------|-------------|
@@ -54,7 +54,7 @@ Individual agents are powerful. But without coordination, they produce:
 | **Fail Fast, Fix Fast** | Maximum 3 retries per task before escalation |
 | **Single Source of Truth** | One canonical spec, one task list, one architecture doc |
 
- 1.3 The Agent Roster by Division
+### 1.3 The Agent Roster by Division
 
 | Division | Agents | Primary Blueprint Orchestration Framework Role |
 |----------|--------|--------------------|
@@ -70,9 +70,9 @@ Individual agents are powerful. But without coordination, they produce:
 
 ---
 
- 2. The Blueprint Orchestration Framework Operating Model
+## 2. The Blueprint Orchestration Framework Operating Model
 
- 2.1 The Seven-Phase Pipeline
+### 2.1 The Seven-Phase Pipeline
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -92,7 +92,7 @@ Individual agents are powerful. But without coordination, they produce:
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
- 2.2 Command Structure
+### 2.2 Command Structure
 
 ```text
                     ┌──────────────────────┐
@@ -115,7 +115,7 @@ Individual agents are powerful. But without coordination, they produce:
      └─────────────────────────────────────────────────┘
 ```
 
- 2.3 Activation Modes
+### 2.3 Activation Modes
 
 Blueprint Orchestration Framework supports three deployment configurations:
 
@@ -127,11 +127,11 @@ Blueprint Orchestration Framework supports three deployment configurations:
 
 ---
 
- 3. Phase 0 — Intelligence & Discovery
+## 3. Phase 0 — Intelligence & Discovery
 
 > **Objective**: Understand the landscape before committing resources. No building until the problem is validated.
 
- 3.1 Active Agents
+### 3.1 Active Agents
 
 | Agent | Role in Phase | Primary Output |
 |-------|--------------|----------------|
@@ -142,7 +142,7 @@ Blueprint Orchestration Framework supports three deployment configurations:
 | **Legal Compliance Checker** | Regulatory scan | Compliance Requirements Matrix |
 | **Tool Evaluator** | Technology landscape | Tech Stack Assessment |
 
- 3.2 Parallel Workstreams
+### 3.2 Parallel Workstreams
 
 ```text
 WORKSTREAM A: Market Intelligence          WORKSTREAM B: User Intelligence
@@ -162,7 +162,7 @@ WORKSTREAM A: Market Intelligence          WORKSTREAM B: User Intelligence
     └── Jurisdiction mapping                   └── Integration feasibility
 ```
 
- 3.3 Phase 0 Quality Gate
+### 3.3 Phase 0 Quality Gate
 
 **Gate Keeper**: Executive Summary Generator
 
@@ -178,11 +178,11 @@ WORKSTREAM A: Market Intelligence          WORKSTREAM B: User Intelligence
 
 ---
 
- 4. Phase 1 — Strategy & Architecture
+## 4. Phase 1 — Strategy & Architecture
 
 > **Objective**: Define what we're building, how it's structured, and what success looks like — before writing a single line of code.
 
- 4.1 Active Agents
+### 4.1 Active Agents
 
 | Agent | Role in Phase | Primary Output |
 |-------|--------------|----------------|
@@ -195,7 +195,7 @@ WORKSTREAM A: Market Intelligence          WORKSTREAM B: User Intelligence
 | **AI Engineer** | AI/ML architecture (if applicable) | ML System Design |
 | **Finance Tracker** | Budget and resource planning | Financial Plan with ROI projections |
 
- 4.2 Execution Sequence
+### 4.2 Execution Sequence
 
 ```text
 STEP 1: Strategic Framing (Parallel)
@@ -216,7 +216,7 @@ STEP 3: Prioritization (Sequential, after Step 2)
     └── Validation: Studio Producer confirms strategic alignment
 ```
 
- 4.3 Phase 1 Quality Gate
+### 4.3 Phase 1 Quality Gate
 
 **Gate Keeper**: Studio Producer + Reality Checker (dual sign-off)
 
@@ -232,11 +232,11 @@ STEP 3: Prioritization (Sequential, after Step 2)
 
 ---
 
- 5. Phase 2 — Foundation & Scaffolding
+## 5. Phase 2 — Foundation & Scaffolding
 
 > **Objective**: Build the technical and operational foundation that all subsequent work depends on. Get the skeleton standing before adding muscle.
 
- 5.1 Active Agents
+### 5.1 Active Agents
 
 | Agent | Role in Phase | Primary Output |
 |-------|--------------|----------------|
@@ -247,7 +247,7 @@ STEP 3: Prioritization (Sequential, after Step 2)
 | **Infrastructure Maintainer** | Cloud infrastructure setup | Monitoring + Logging + Alerting |
 | **Studio Operations** | Process setup | Collaboration tools + workflows |
 
- 5.2 Parallel Workstreams
+### 5.2 Parallel Workstreams
 
 ```text
 WORKSTREAM A: Infrastructure              WORKSTREAM B: Application Foundation
@@ -267,7 +267,7 @@ WORKSTREAM A: Infrastructure              WORKSTREAM B: Application Foundation
     └── Documentation templates               └── Theme system (light/dark/system)
 ```
 
- 5.3 Phase 2 Quality Gate
+### 5.3 Phase 2 Quality Gate
 
 **Gate Keeper**: DevOps Automator + Evidence Collector
 
@@ -284,11 +284,11 @@ WORKSTREAM A: Infrastructure              WORKSTREAM B: Application Foundation
 
 ---
 
- 6. Phase 3 — Build & Iterate
+## 6. Phase 3 — Build & Iterate
 
 > **Objective**: Implement features through continuous DevQA loops. Every task is validated before the next begins. This is where the bulk of the work happens.
 
- 6.1 The DevQA Loop
+### 6.1 The DevQA Loop
 
 This is the heart of Blueprint Orchestration Framework. The Agents Orchestrator manages a **task-by-task quality loop**:
 
@@ -313,7 +313,7 @@ This is the heart of Blueprint Orchestration Framework. The Agents Orchestrator 
 └─────────────────────────────────────────────────────────┘
 ```
 
- 6.2 Agent Assignment by Task Type
+### 6.2 Agent Assignment by Task Type
 
 | Task Type | Primary Developer | QA Agent | Specialist Support |
 |-----------|------------------|----------|-------------------|
@@ -331,7 +331,7 @@ This is the heart of Blueprint Orchestration Framework. The Agents Orchestrator 
 | CLI/Terminal | Terminal Integration Specialist | API Tester | LSP/Index Engineer |
 | Code Intelligence | LSP/Index Engineer | Test Results Analyzer | Senior Developer |
 
- 6.3 Parallel Build Tracks
+### 6.3 Parallel Build Tracks
 
 For complex projects, multiple tracks run simultaneously:
 
@@ -359,7 +359,7 @@ TRACK C: Quality & Operations            TRACK D: Brand & Experience
     └── A/B test management
 ```
 
- 6.4 Phase 3 Quality Gate
+### 6.4 Phase 3 Quality Gate
 
 **Gate Keeper**: Agents Orchestrator
 
@@ -375,11 +375,11 @@ TRACK C: Quality & Operations            TRACK D: Brand & Experience
 
 ---
 
- 7. Phase 4 — Quality & Hardening
+## 7. Phase 4 — Quality & Hardening
 
 > **Objective**: The final quality gauntlet. The Reality Checker defaults to "NEEDS WORK" — you must prove production readiness with overwhelming evidence.
 
- 7.1 Active Agents
+### 7.1 Active Agents
 
 | Agent | Role in Phase | Primary Output |
 |-------|--------------|----------------|
@@ -392,7 +392,7 @@ TRACK C: Quality & Operations            TRACK D: Brand & Experience
 | **Infrastructure Maintainer** | Production readiness check | Infrastructure Readiness Report |
 | **Workflow Optimizer** | Process efficiency review | Optimization Recommendations |
 
- 7.2 The Hardening Sequence
+### 7.2 The Hardening Sequence
 
 ```text
 STEP 1: Evidence Collection (Parallel)
@@ -415,7 +415,7 @@ STEP 3: Final Judgment (Sequential, after Step 2)
     └── READY only with overwhelming evidence across all criteria
 ```
 
- 7.3 Phase 4 Quality Gate (THE FINAL GATE)
+### 7.3 Phase 4 Quality Gate (THE FINAL GATE)
 
 **Gate Keeper**: Reality Checker (sole authority)
 
@@ -437,11 +437,11 @@ STEP 3: Final Judgment (Sequential, after Step 2)
 
 ---
 
- 8. Phase 5 — Launch & Growth
+## 8. Phase 5 — Launch & Growth
 
 > **Objective**: Coordinate the go-to-market execution across all channels simultaneously. Maximum impact at launch.
 
- 8.1 Active Agents
+### 8.1 Active Agents
 
 | Agent | Role in Phase | Primary Output |
 |-------|--------------|----------------|
@@ -458,7 +458,7 @@ STEP 3: Final Judgment (Sequential, after Step 2)
 | **DevOps Automator** | Deployment execution | Zero-downtime deployment |
 | **Infrastructure Maintainer** | Launch monitoring | Real-time dashboards |
 
- 8.2 Launch Sequence
+### 8.2 Launch Sequence
 
 ```text
 T-7 DAYS: Pre-Launch
@@ -488,7 +488,7 @@ T+1 TO T+7: Post-Launch
 └── Executive Summary Generator → Daily stakeholder briefings
 ```
 
- 8.3 Phase 5 Quality Gate
+### 8.3 Phase 5 Quality Gate
 
 **Gate Keeper**: Studio Producer + Analytics Reporter
 
@@ -504,11 +504,11 @@ T+1 TO T+7: Post-Launch
 
 ---
 
- 9. Phase 6 — Operate & Evolve
+## 9. Phase 6 — Operate & Evolve
 
 > **Objective**: Sustained operations with continuous improvement. The product is live — now make it thrive.
 
- 9.1 Active Agents (Ongoing)
+### 9.1 Active Agents (Ongoing)
 
 | Agent | Cadence | Responsibility |
 |-------|---------|---------------|
@@ -525,7 +525,7 @@ T+1 TO T+7: Post-Launch
 | **Growth Hacker** | Ongoing | Acquisition optimization and growth experiments |
 | **Workflow Optimizer** | Quarterly | Process improvement and efficiency gains |
 
- 9.2 Continuous Improvement Cycle
+### 9.2 Continuous Improvement Cycle
 
 ```text
 ┌──────────────────────────────────────────────────────────┐
@@ -551,9 +551,9 @@ T+1 TO T+7: Post-Launch
 
 ---
 
- 10. Agent Coordination Matrix
+## 10. Agent Coordination Matrix
 
- 10.1 Full Cross-Division Dependency Map
+### 10.1 Full Cross-Division Dependency Map
 
 This matrix shows which agents produce outputs consumed by other agents. Read as: **Row agent produces → Column agent consumes**.
 
@@ -573,7 +573,7 @@ Specialized         │    │     │     │    │    │    │    │     �
  = Active dependency (producer creates artifacts consumed by this division)
 ```
 
- 10.2 Critical Handoff Pairs
+### 10.2 Critical Handoff Pairs
 
 These are the highest-traffic handoff relationships in Blueprint Orchestration Framework:
 
@@ -594,9 +594,9 @@ These are the highest-traffic handoff relationships in Blueprint Orchestration F
 
 ---
 
- 11. Handoff Protocols
+## 11. Handoff Protocols
 
- 11.1 Standard Handoff Template
+### 11.1 Standard Handoff Template
 
 Every agent-to-agent handoff must include:
 
@@ -629,7 +629,7 @@ Every agent-to-agent handoff must include:
 - **Handoff to next**: [Who receives the output and what they need]
 ```
 
- 11.2 QA Feedback Loop Protocol
+### 11.2 QA Feedback Loop Protocol
 
 When a task fails QA, the feedback must be actionable:
 
@@ -665,7 +665,7 @@ When a task fails QA, the feedback must be actionable:
 - Attempt [N+1] of 3 maximum
 ```
 
- 11.3 Escalation Protocol
+### 11.3 Escalation Protocol
 
 When a task exceeds 3 retry attempts:
 
@@ -700,9 +700,9 @@ When a task exceeds 3 retry attempts:
 
 ---
 
- 12. Quality Gates
+## 12. Quality Gates
 
- 12.1 Gate Summary
+### 12.1 Gate Summary
 
 | Phase | Gate Name | Gate Keeper | Pass Criteria |
 |-------|-----------|-------------|---------------|
@@ -713,7 +713,7 @@ When a task exceeds 3 retry attempts:
 | 4 → 5 | Production Gate | Reality Checker (sole authority) | User journeys complete, cross-device consistent, security validated, spec compliant |
 | 5 → 6 | Launch Gate | Studio Producer + Analytics Reporter | Deployment successful, systems stable, growth channels active |
 
- 12.2 Gate Failure Handling
+### 12.2 Gate Failure Handling
 
 ```text
 IF gate FAILS:
@@ -726,9 +726,9 @@ IF gate FAILS:
 
 ---
 
- 13. Risk Management
+## 13. Risk Management
 
- 13.1 Risk Categories and Owners
+### 13.1 Risk Categories and Owners
 
 | Risk Category | Primary Owner | Mitigation Agent | Escalation Path |
 |---------------|--------------|-------------------|-----------------|
@@ -743,7 +743,7 @@ IF gate FAILS:
 | Team Bottleneck | Project Shepherd | Studio Operations | Studio Producer |
 | Quality Regression | Reality Checker | Evidence Collector | Agents Orchestrator |
 
- 13.2 Risk Response Matrix
+### 13.2 Risk Response Matrix
 
 | Severity | Response Time | Decision Authority | Action |
 |----------|--------------|-------------------|--------|
@@ -754,9 +754,9 @@ IF gate FAILS:
 
 ---
 
- 14. Success Metrics
+## 14. Success Metrics
 
- 14.1 Pipeline Metrics
+### 14.1 Pipeline Metrics
 
 | Metric | Target | Measurement Agent |
 |--------|--------|-------------------|
@@ -766,7 +766,7 @@ IF gate FAILS:
 | Pipeline cycle time | Within sprint estimate ±15% | Project Shepherd |
 | Quality gate pass rate | 80%+ on first attempt | Reality Checker |
 
- 14.2 Product Metrics
+### 14.2 Product Metrics
 
 | Metric | Target | Measurement Agent |
 |--------|--------|-------------------|
@@ -777,7 +777,7 @@ IF gate FAILS:
 | Security vulnerabilities | Zero critical | Legal Compliance Checker |
 | Spec compliance | 100% | Reality Checker |
 
- 14.3 Business Metrics
+### 14.3 Business Metrics
 
 | Metric | Target | Measurement Agent |
 |--------|--------|-------------------|
@@ -788,7 +788,7 @@ IF gate FAILS:
 | NPS score | > 50 | Feedback Synthesizer |
 | Portfolio ROI | > 25% | Studio Producer |
 
- 14.4 Operational Metrics
+### 14.4 Operational Metrics
 
 | Metric | Target | Measurement Agent |
 |--------|--------|-------------------|
@@ -800,9 +800,9 @@ IF gate FAILS:
 
 ---
 
- 15. Quick-Start Activation Guide
+## 15. Quick-Start Activation Guide
 
- 15.1 Blueprint Orchestration Framework-Full Activation (Enterprise)
+### 15.1 Blueprint Orchestration Framework-Full Activation (Enterprise)
 
 ```bash
  Step 1: Initialize Blueprint Orchestration Framework pipeline
@@ -811,14 +811,14 @@ IF gate FAILS:
  Execute complete 7-phase pipeline with all quality gates."
 
  The Orchestrator will:
- 1. Read the project specification
- 2. Activate Phase 0 agents for discovery
- 3. Progress through all phases with quality gates
- 4. Manage DevQA loops automatically
- 5. Report status at each phase boundary
+## 1. Read the project specification
+## 2. Activate Phase 0 agents for discovery
+## 3. Progress through all phases with quality gates
+## 4. Manage DevQA loops automatically
+## 5. Report status at each phase boundary
 ```
 
- 15.2 Blueprint Orchestration Framework-Sprint Activation (Feature/MVP)
+### 15.2 Blueprint Orchestration Framework-Sprint Activation (Feature/MVP)
 
 ```bash
  Step 1: Initialize sprint pipeline
@@ -837,7 +837,7 @@ IF gate FAILS:
  Specialized: Agents Orchestrator
 ```
 
- 15.3 Blueprint Orchestration Framework-Micro Activation (Targeted Task)
+### 15.3 Blueprint Orchestration Framework-Micro Activation (Targeted Task)
 
 ```bash
  Step 1: Direct agent activation
@@ -868,7 +868,7 @@ IF gate FAILS:
    UX Researcher → UX Architect → Frontend Developer → Evidence Collector
 ```
 
- 15.4 Agent Activation Prompt Templates
+### 15.4 Agent Activation Prompt Templates
 
  For the Orchestrator (Pipeline Start)
 
@@ -880,13 +880,13 @@ Mode: [Full/Sprint/Micro]
 Current phase: [Phase N]
 
 Execute the Blueprint Orchestration Framework protocol:
-1. Read the project specification
-2. Activate Phase [N] agents per the Blueprint Orchestration Framework strategy
-3. Manage handoffs using the Blueprint Orchestration Framework Handoff Template
-4. Enforce quality gates before phase advancement
-5. Track all tasks with status reporting
-6. Run DevQA loops for all implementation tasks
-7. Escalate after 3 failed attempts per task
+## 1. Read the project specification
+## 2. Activate Phase [N] agents per the Blueprint Orchestration Framework strategy
+## 3. Manage handoffs using the Blueprint Orchestration Framework Handoff Template
+## 4. Enforce quality gates before phase advancement
+## 5. Track all tasks with status reporting
+## 6. Run DevQA loops for all implementation tasks
+## 7. Escalate after 3 failed attempts per task
 
 Report format: Blueprint Orchestration Framework Pipeline Status Report (see template in strategy doc)
 ```
@@ -903,10 +903,10 @@ Design system: [path to CSS/design tokens]
 Brand guidelines: [path to brand doc]
 
 Implement this task following:
-1. The architecture specification exactly
-2. The design system tokens and patterns
-3. The brand guidelines for visual consistency
-4. Accessibility standards (WCAG 2.1 AA)
+## 1. The architecture specification exactly
+## 2. The design system tokens and patterns
+## 3. The brand guidelines for visual consistency
+## 4. Accessibility standards (WCAG 2.1 AA)
 
 When complete, your work will be reviewed by Evidence Collector.
 Acceptance criteria: [specific criteria from task list]
@@ -923,10 +923,10 @@ Developer: [Which agent implemented this]
 Attempt: [N] of 3 maximum
 
 Validate against:
-1. Task acceptance criteria: [specific criteria]
-2. Architecture specification: [path]
-3. Brand guidelines: [path]
-4. Performance requirements: [specific thresholds]
+## 1. Task acceptance criteria: [specific criteria]
+## 2. Architecture specification: [path]
+## 3. Brand guidelines: [path]
+## 4. Performance requirements: [specific thresholds]
 
 Provide verdict: PASS or FAIL
 If FAIL: Include specific issues, evidence, and fix instructions
@@ -935,7 +935,7 @@ Use the Blueprint Orchestration Framework QA Feedback Loop Protocol format
 
 ---
 
- Appendix A: Division Quick Reference
+## Appendix A: Division Quick Reference
 
  Engineering Division — "Build It Right"
 | Agent | Superpower | Activation Trigger |
@@ -1030,7 +1030,7 @@ Use the Blueprint Orchestration Framework QA Feedback Loop Protocol format
 
 ---
 
- Appendix B: Blueprint Orchestration Framework Pipeline Status Report Template
+## Appendix B: Blueprint Orchestration Framework Pipeline Status Report Template
 
 ```markdown
  Blueprint Orchestration Framework Pipeline Status Report
@@ -1085,7 +1085,7 @@ Use the Blueprint Orchestration Framework QA Feedback Loop Protocol format
 
 ---
 
- Appendix C: Blueprint Orchestration Framework Glossary
+## Appendix C: Blueprint Orchestration Framework Glossary
 
 | Term | Definition |
 |------|-----------|
