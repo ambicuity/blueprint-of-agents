@@ -1,23 +1,47 @@
-# Blueprint of Agents: Production-Ready AI Specialists
+# Blueprint of Agents
 
-A curated collection of meticulously crafted AI agent personalities for [Claude Code](https://docs.anthropic.com/en/docs/build-with-claude/code), [Cursor](https://cursor.sh), and any LLM-powered coding assistant. Each agent is a specialized expert with a distinct personality, proven workflows, concrete deliverables, and measurable success metrics.
+Production-grade AI agent blueprints you can adopt in minutes.
 
-> **61 specialized agents across 9 divisions.** 10,000+ lines of domain expertise, code examples, and battle-tested processes.
+Blueprint of Agents is a Markdown-first library of specialized agent roles, orchestration playbooks, and reusable workflows for teams using [Claude Code](https://docs.anthropic.com/en/docs/build-with-claude/code), [Cursor](https://cursor.sh), and other coding assistants.
+
+- 119 agents across 11 divisions
+- Ready-to-copy activation prompts
+- Practical workflows for MVPs, launches, and incident response
+
+---
+
+## Start in 2 Minutes
+
+Choose one path:
+
+1. **Use one specialist**
+   - Browse the [Blueprint Catalog](blueprints/README.md)
+   - Copy one activation prompt from that blueprint
+2. **Run a proven workflow**
+   - Start with the [Startup MVP workflow](workflows/workflow-startup-mvp.md)
+3. **Run full orchestration**
+   - Use the [Orchestration Framework](playbooks/orchestration-framework.md)
+
+If you only do one thing now, start with path 2.
+
+Need onboarding help? Start at [docs/start-here.md](docs/start-here.md).
 
 ---
 
 ## Table of Contents
 
-1. [What Is This?](#what-is-this)
-2. [Quick Start](#quick-start)
-3. [Agent Roster](#agent-roster)
-4. [Real-World Use Cases](#real-world-use-cases)
-5. [Agent Design Philosophy](#agent-design-philosophy)
-6. [Playbooks and Strategy](#playbooks-and-strategy)
-7. [Contributing](#contributing)
-8. [Roadmap](#roadmap)
-9. [License](#license)
-10. [Community](#community)
+1. [Start in 2 Minutes](#start-in-2-minutes)
+2. [What Is This?](#what-is-this)
+3. [Quick Start](#quick-start)
+4. [Multi-Agent Integration](#multi-agent-integration)
+5. [Agent Roster](#agent-roster)
+6. [Real-World Use Cases](#real-world-use-cases)
+7. [Agent Design Philosophy](#agent-design-philosophy)
+8. [Playbooks and Strategy](#playbooks-and-strategy)
+9. [Contributing](#contributing)
+10. [Roadmap](#roadmap)
+11. [License](#license)
+12. [Community](#community)
 
 ---
 
@@ -62,7 +86,78 @@ Browse the agents below and copy or adapt the ones you need.
 
 ---
 
+## Multi-Agent Integration
+
+This repository now includes an additive integration layer for multi-runtime and multi-provider workflows.
+
+### Quick links
+
+- [Integration Docs](docs/integrations/README.md)
+- [Install Guides](docs/integrations/install-guides.md)
+- [Platform Install Matrix](docs/integrations/install-guides.md#platform-install-matrix)
+- [Provider Compatibility Matrix](reports/provider-compatibility-matrix.md)
+- [Installable Pack Index](manifests/installable-packs.yaml)
+
+### Runtime targets
+
+- Claude Code
+- Codex CLI
+- Gemini CLI
+- Cursor (workflow/rules integration)
+- OpenCode
+- Plus documented marketplace-style reference coverage for Codex App and Copilot CLI.
+
+### Provider model
+
+- Model providers: Anthropic (Claude), Gemini, OpenAI-compatible APIs
+- Workflow tools: Cursor
+- Runtimes: Claude Code, Codex CLI, Gemini CLI, OpenCode
+
+### Validate and smoke-test
+
+```bash
+./tools/validate-integration.sh
+./tools/smoke-test-install.sh
+```
+
+### Migration note
+
+- Existing `cp -r blueprint-of-agents/blueprints/* ~/.claude/agents/` workflow remains valid and supported.
+
+### Install with dry-run first
+
+```bash
+./tools/install-skill-pack.sh --target claude --pack blueprints --dry-run
+./tools/install-skill-pack.sh --target codex --pack templates --dry-run
+```
+
+---
+
 ## Agent Roster
+
+### Business Operations Division
+
+Keeping revenue, customers, vendors, and operating processes moving.
+
+| Agent | Blueprint |
+|-------|-----------|
+| Revenue Operations Architect | [revenue-operations-architect.md](blueprints/business-operations/revenue-operations-architect.md) |
+| Bill Gates Platform Strategy Advisor | [bill-gates-platform-strategy-advisor.md](blueprints/business-operations/bill-gates-platform-strategy-advisor.md) |
+| Jeff Bezos Customer Obsession Strategist | [jeff-bezos-customer-obsession-strategist.md](blueprints/business-operations/jeff-bezos-customer-obsession-strategist.md) |
+| Warren Buffett Capital Allocation Advisor | [warren-buffett-capital-allocation-advisor.md](blueprints/business-operations/warren-buffett-capital-allocation-advisor.md) |
+| Sales Enablement Strategist | [sales-enablement-strategist.md](blueprints/business-operations/sales-enablement-strategist.md) |
+| Customer Success Manager | [customer-success-manager.md](blueprints/business-operations/customer-success-manager.md) |
+| Partnerships Manager | [partnerships-manager.md](blueprints/business-operations/partnerships-manager.md) |
+| Procurement Specialist | [procurement-specialist.md](blueprints/business-operations/procurement-specialist.md) |
+| Operations Analyst | [operations-analyst.md](blueprints/business-operations/operations-analyst.md) |
+| Business Development Representative | [business-development-representative.md](blueprints/business-operations/business-development-representative.md) |
+| Account Executive | [account-executive.md](blueprints/business-operations/account-executive.md) |
+| Customer Onboarding Specialist | [customer-onboarding-specialist.md](blueprints/business-operations/customer-onboarding-specialist.md) |
+| Renewals Manager | [renewals-manager.md](blueprints/business-operations/renewals-manager.md) |
+| Vendor Risk Manager | [vendor-risk-manager.md](blueprints/business-operations/vendor-risk-manager.md) |
+| SOP Documentation Specialist | [sop-documentation-specialist.md](blueprints/business-operations/sop-documentation-specialist.md) |
+
+---
 
 ### Engineering Division
 
@@ -71,6 +166,11 @@ Building the future, one commit at a time.
 | Agent | Blueprint |
 |-------|-----------|
 | Frontend Developer | [frontend-developer.md](blueprints/engineering/frontend-developer.md) |
+| Andrej Karpathy AI Education Engineer | [andrej-karpathy-ai-education-engineer.md](blueprints/engineering/andrej-karpathy-ai-education-engineer.md) |
+| Jensen Huang Accelerated Computing Strategist | [jensen-huang-accelerated-computing-strategist.md](blueprints/engineering/jensen-huang-accelerated-computing-strategist.md) |
+| Linus Torvalds Engineering Rigor Reviewer | [linus-torvalds-engineering-rigor-reviewer.md](blueprints/engineering/linus-torvalds-engineering-rigor-reviewer.md) |
+| Design System Web Specialist | [design-system-web-specialist.md](blueprints/engineering/design-system-web-specialist.md) |
+| Responsive Layout Specialist | [responsive-layout-specialist.md](blueprints/engineering/responsive-layout-specialist.md) |
 | Backend Architect | [backend-architect.md](blueprints/engineering/backend-architect.md) |
 | Mobile App Builder | [mobile-app-builder.md](blueprints/engineering/mobile-app-builder.md) |
 | AI Engineer | [ai-engineer.md](blueprints/engineering/ai-engineer.md) |
@@ -78,6 +178,30 @@ Building the future, one commit at a time.
 | Rapid Prototyper | [rapid-prototyper.md](blueprints/engineering/rapid-prototyper.md) |
 | Senior Developer | [senior-developer.md](blueprints/engineering/senior-developer.md) |
 | Security Engineer | [security-engineer.md](blueprints/engineering/security-engineer.md) |
+| Guardrails Engineer | [guardrails-engineer.md](blueprints/engineering/guardrails-engineer.md) |
+| MCP Tooling Architect | [mcp-tooling-architect.md](blueprints/engineering/mcp-tooling-architect.md) |
+| Context Memory Integrity Engineer | [context-memory-integrity-engineer.md](blueprints/engineering/context-memory-integrity-engineer.md) |
+
+---
+
+### GitHub Division
+
+Keeping repository operations, issues, PRs, CI, releases, security, Copilot workflows, and GitHub MCP access healthy.
+
+| Agent | Blueprint |
+|-------|-----------|
+| GitHub Repository Steward | [github-repository-steward.md](blueprints/github/github-repository-steward.md) |
+| GitHub Issue Triage Manager | [github-issue-triage-manager.md](blueprints/github/github-issue-triage-manager.md) |
+| GitHub Pull Request Reviewer | [github-pull-request-reviewer.md](blueprints/github/github-pull-request-reviewer.md) |
+| GitHub Review Comment Resolver | [github-review-comment-resolver.md](blueprints/github/github-review-comment-resolver.md) |
+| GitHub Actions CI Debugger | [github-actions-ci-debugger.md](blueprints/github/github-actions-ci-debugger.md) |
+| GitHub Release Coordinator | [github-release-coordinator.md](blueprints/github/github-release-coordinator.md) |
+| GitHub Security Alerts Manager | [github-security-alerts-manager.md](blueprints/github/github-security-alerts-manager.md) |
+| GitHub Rulesets Guardian | [github-rulesets-guardian.md](blueprints/github/github-rulesets-guardian.md) |
+| GitHub Copilot Coding Agent Coordinator | [github-copilot-coding-agent-coordinator.md](blueprints/github/github-copilot-coding-agent-coordinator.md) |
+| GitHub Copilot Code Review Analyst | [github-copilot-code-review-analyst.md](blueprints/github/github-copilot-code-review-analyst.md) |
+| GitHub MCP Integration Specialist | [github-mcp-integration-specialist.md](blueprints/github/github-mcp-integration-specialist.md) |
+| GitHub Projects Coordinator | [github-projects-coordinator.md](blueprints/github/github-projects-coordinator.md) |
 
 ---
 
@@ -88,6 +212,10 @@ Making it beautiful, usable, and delightful.
 | Agent | Blueprint |
 |-------|-----------|
 | UI Designer | [ui-designer.md](blueprints/design/ui-designer.md) |
+| Website Strategy Architect | [website-strategy-architect.md](blueprints/design/website-strategy-architect.md) |
+| Landing Page Designer | [landing-page-designer.md](blueprints/design/landing-page-designer.md) |
+| Web Visual Designer | [web-visual-designer.md](blueprints/design/web-visual-designer.md) |
+| Web Accessibility Designer | [web-accessibility-designer.md](blueprints/design/web-accessibility-designer.md) |
 | UX Researcher | [ux-researcher.md](blueprints/design/ux-researcher.md) |
 | UX Architect | [ux-architect.md](blueprints/design/ux-architect.md) |
 | Brand Guardian | [brand-guardian.md](blueprints/design/brand-guardian.md) |
@@ -105,6 +233,9 @@ Growing your audience, one authentic interaction at a time.
 |-------|-----------|
 | Growth Hacker | [growth-hacker.md](blueprints/marketing/growth-hacker.md) |
 | Content Creator | [content-creator.md](blueprints/marketing/content-creator.md) |
+| Conversion UX Designer | [conversion-ux-designer.md](blueprints/marketing/conversion-ux-designer.md) |
+| Web Content UX Writer | [web-content-ux-writer.md](blueprints/marketing/web-content-ux-writer.md) |
+| SEO Information Architect | [seo-information-architect.md](blueprints/marketing/seo-information-architect.md) |
 | Twitter Engager | [twitter-engager.md](blueprints/marketing/twitter-engager.md) |
 | TikTok Strategist | [tiktok-strategist.md](blueprints/marketing/tiktok-strategist.md) |
 | Instagram Curator | [instagram-curator.md](blueprints/marketing/instagram-curator.md) |
@@ -124,8 +255,13 @@ Building the right thing at the right time.
 | Agent | Blueprint |
 |-------|-----------|
 | Sprint Prioritizer | [sprint-prioritizer.md](blueprints/product/sprint-prioritizer.md) |
+| Elon Musk First Principles Operator | [elon-musk-first-principles-operator.md](blueprints/product/elon-musk-first-principles-operator.md) |
+| Steve Jobs Product Taste Director | [steve-jobs-product-taste-director.md](blueprints/product/steve-jobs-product-taste-director.md) |
+| Sam Altman AI Platform Strategist | [sam-altman-ai-platform-strategist.md](blueprints/product/sam-altman-ai-platform-strategist.md) |
+| Paul Graham Startup Mentor | [paul-graham-startup-mentor.md](blueprints/product/paul-graham-startup-mentor.md) |
 | Trend Researcher | [trend-researcher.md](blueprints/product/trend-researcher.md) |
 | Feedback Synthesizer | [feedback-synthesizer.md](blueprints/product/feedback-synthesizer.md) |
+| Human-Agent Experience Designer | [human-agent-experience-designer.md](blueprints/product/human-agent-experience-designer.md) |
 
 ---
 
@@ -140,6 +276,7 @@ Keeping projects on track, on time, and under budget.
 | Studio Operations | [studio-operations.md](blueprints/project-management/studio-operations.md) |
 | Experiment Tracker | [experiment-tracker.md](blueprints/project-management/experiment-tracker.md) |
 | Senior Project Manager | [project-manager-senior.md](blueprints/project-management/project-manager-senior.md) |
+| Agent Release Manager | [agent-release-manager.md](blueprints/project-management/agent-release-manager.md) |
 
 ---
 
@@ -157,6 +294,10 @@ Breaking things so users do not have to.
 | Tool Evaluator | [tool-evaluator.md](blueprints/testing/tool-evaluator.md) |
 | Workflow Optimizer | [workflow-optimizer.md](blueprints/testing/workflow-optimizer.md) |
 | Accessibility Auditor | [accessibility-auditor.md](blueprints/testing/accessibility-auditor.md) |
+| Website QA Reviewer | [website-qa-reviewer.md](blueprints/testing/website-qa-reviewer.md) |
+| Agentic Risk Assessor | [agentic-risk-assessor.md](blueprints/testing/agentic-risk-assessor.md) |
+| Agent Red Team Operator | [agent-red-team-operator.md](blueprints/testing/agent-red-team-operator.md) |
+| Agent Evaluation Engineer | [agent-evaluation-engineer.md](blueprints/testing/agent-evaluation-engineer.md) |
 
 ---
 
@@ -172,6 +313,8 @@ The backbone of the operation.
 | Infrastructure Maintainer | [infrastructure-maintainer.md](blueprints/support/infrastructure-maintainer.md) |
 | Legal Compliance Checker | [legal-compliance-checker.md](blueprints/support/legal-compliance-checker.md) |
 | Executive Summary Generator | [executive-summary-generator.md](blueprints/support/executive-summary-generator.md) |
+| Agent Observability Analyst | [agent-observability-analyst.md](blueprints/support/agent-observability-analyst.md) |
+| Agent Incident Commander | [agent-incident-commander.md](blueprints/support/agent-incident-commander.md) |
 
 ---
 
@@ -203,6 +346,10 @@ Unique specialists who do not fit in a single category.
 | Data Consolidation Agent | [data-consolidation-agent.md](blueprints/specialized/data-consolidation-agent.md) |
 | Report Distribution Agent | [report-distribution-agent.md](blueprints/specialized/report-distribution-agent.md) |
 | Agentic Identity and Trust Architect | [agentic-identity-trust.md](blueprints/specialized/agentic-identity-trust.md) |
+| AI Governance Officer | [ai-governance-officer.md](blueprints/specialized/ai-governance-officer.md) |
+| Agent Supply Chain Auditor | [agent-supply-chain-auditor.md](blueprints/specialized/agent-supply-chain-auditor.md) |
+| Naval Ravikant Leverage Philosopher | [naval-ravikant-leverage-philosopher.md](blueprints/specialized/naval-ravikant-leverage-philosopher.md) |
+| Satya Nadella Transformation Leader | [satya-nadella-transformation-leader.md](blueprints/specialized/satya-nadella-transformation-leader.md) |
 
 ---
 
@@ -247,7 +394,7 @@ Unique specialists who do not fit in a single category.
 
 ### Scenario 4: Full-Stack Product Discovery
 
-See the [Orchestration Framework Spatial Discovery Exercise](workflows/orchestration-framework-spatial-discovery.md) for a complete example where 8 agents were deployed simultaneously to evaluate a software opportunity and produce a unified product plan covering market validation, technical architecture, brand strategy, go-to-market, support systems, UX research, project execution, and spatial UI design.
+See the [Orchestration Framework Spatial Discovery Exercise](workflows/spatial-discovery-exercise.md) for a complete example where 8 agents were deployed simultaneously to evaluate a software opportunity and produce a unified product plan covering market validation, technical architecture, brand strategy, go-to-market, support systems, UX research, project execution, and spatial UI design.
 
 More examples are available in the [workflows/](workflows/) directory.
 
@@ -271,7 +418,8 @@ The [playbooks/](playbooks/) directory contains comprehensive operational guides
 
 - **[Executive Brief](playbooks/EXECUTIVE-BRIEF.md)** -- High-level overview for decision-makers
 - **[Quick Start Guide](playbooks/QUICKSTART.md)** -- Get started in minutes
-- **[Orchestration Framework Strategy](playbooks/orchestration-framework-strategy.md)** -- Multi-agent orchestration framework
+- **[Orchestration Framework Strategy](playbooks/orchestration-framework.md)** -- Multi-agent orchestration framework
+- **[Playbooks Index](playbooks/index.md)** -- Navigation by phase and scenario
 
 ### Phased Delivery Playbooks
 
@@ -298,6 +446,12 @@ The [playbooks/](playbooks/) directory contains comprehensive operational guides
 
 - [Agent Activation Prompts](playbooks/coordination/agent-activation-prompts.md)
 - [Handoff Templates](playbooks/coordination/handoff-templates.md)
+
+### Documentation Hub
+
+- [Start Here](docs/start-here.md)
+- [Choose an Agent](docs/choose-an-agent.md)
+- [Blueprint Schema Standard](docs/standards/blueprint-schema.md)
 
 ---
 
@@ -329,7 +483,7 @@ We welcome contributions. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full gu
 
 ## Stats
 
-- 61 specialized agents across 9 divisions
+- 119 specialized agents across 11 divisions
 - 10,000+ lines of personality, process, and code examples
 - Months of iteration from real-world usage
 - Battle-tested in production environments
@@ -344,9 +498,10 @@ MIT License -- Use freely, commercially or personally. See [LICENSE](LICENSE) fo
 
 ## Community
 
-- **GitHub Discussions**: [Share your success stories](https://github.com/ambicuity/blueprint-of-agents/discussions)
+- **Community feedback**: [Share your success stories via Issues](https://github.com/ambicuity/blueprint-of-agents/issues)
 - **Issues**: [Report bugs or request features](https://github.com/ambicuity/blueprint-of-agents/issues)
 - **Contributing**: [Read the guide](CONTRIBUTING.md)
+- **Support**: [Get help and support channels](.github/SUPPORT.md)
 - **Security**: [Report vulnerabilities](SECURITY.md)
 
 ---
@@ -361,9 +516,11 @@ This repository is maintained by [Ritesh Rana](https://github.com/ambicuity) (`@
 
 1. Browse the agents above and find specialists for your needs
 2. Copy the agent blueprints to `~/.claude/agents/` for Claude Code integration
-3. Activate agents by referencing them in your coding sessions
-4. Customize agent personalities and workflows for your specific needs
-5. Contribute back to the community
+3. For cross-runtime setups, follow [docs/integrations/install-guides.md](docs/integrations/install-guides.md)
+4. Validate integration with `./tools/validate-integration.sh`
+5. Activate agents by referencing them in your coding sessions
+6. Customize agent personalities and workflows for your specific needs
+7. Contribute back to the community
 
 ---
 

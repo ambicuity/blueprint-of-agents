@@ -1,4 +1,4 @@
-  Blueprint Orchestration Framework Executive Brief
+# Blueprint Orchestration Framework Executive Brief
 
  Blueprint Orchestration Framework
 
@@ -10,13 +10,13 @@ Blueprint of Agents comprises specialized AI agents across 9 divisions — engin
 
  2. KEY FINDINGS
 
-**Finding 1**: Multi-agent projects fail at handoff boundaries 73% of the time when agents lack structured coordination protocols. **Strategic implication: Standardized handoff templates and context continuity are the highest-leverage intervention.**
+**Finding 1**: Multi-agent projects commonly fail at handoff boundaries when agents lack structured coordination protocols. **Strategic implication: Standardized handoff templates and context continuity are the highest-leverage intervention.**
 
 **Finding 2**: Quality assessment without evidence requirements leads to "fantasy approvals" — agents rating basic implementations as A+ without proof. **Strategic implication: The Reality Checker's default-to-NEEDS-WORK posture and evidence-based gates prevent premature production deployment.**
 
-**Finding 3**: Parallel execution across 4 simultaneous tracks (Core Product, Growth, Quality, Brand) compresses timelines by 40-60% compared to sequential agent activation. **Strategic implication: Blueprint Orchestration Framework's parallel workstream design is the primary time-to-market accelerator.**
+**Finding 3**: Parallel execution across 4 simultaneous tracks (Core Product, Growth, Quality, Brand) can materially compress timelines versus sequential agent activation. **Strategic implication: Blueprint Orchestration Framework's parallel workstream design is the primary time-to-market accelerator.**
 
-**Finding 4**: The DevQA loop (build → test → pass/fail → retry) with a 3-attempt maximum catches 95% of defects before integration, reducing Phase 4 hardening time by 50%. **Strategic implication: Continuous quality loops are more effective than end-of-pipeline testing.**
+**Finding 4**: The DevQA loop (build → test → pass/fail → retry) with a 3-attempt maximum catches defects earlier and reduces late-stage rework. **Strategic implication: Continuous quality loops are more effective than end-of-pipeline testing.**
 
  3. BUSINESS IMPACT
 
@@ -71,7 +71,7 @@ Blueprint of Agents comprises specialized AI agents across 9 divisions — engin
 playbooks/
 ├── EXECUTIVE-BRIEF.md              ← You are here
 ├── QUICKSTART.md                   ← 5-minute activation guide
-├── orchestration-framework-strategy.md               ← Complete operational doctrine
+├── orchestration-framework.md               ← Complete operational doctrine
 ├── playbooks/
 │   ├── phase-0-discovery.md        ← Intelligence & discovery
 │   ├── phase-1-strategy.md         ← Strategy & architecture
@@ -91,5 +91,7 @@ playbooks/
 ```
 
 ---
+
+> Metrics in this brief are illustrative planning targets unless your team has validated baselines.
 
 *Blueprint Orchestration Framework: 9 Divisions. 7 Phases. One Unified Strategy.*
