@@ -130,7 +130,7 @@ Blueprint of Agents has deep spatial computing expertise (XR developers, VisionO
 - [MarketsandMarkets - AI Orchestration Market](https://www.marketsandmarkets.com/Market-Reports/ai-orchestration-market-148121911.html)
 - [Deloitte - AI Agent Orchestration Predictions 2026](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/ai-agent-orchestration.html)
 - [Mordor Intelligence - Extended Reality Market](https://www.mordorintelligence.com/industry-reports/extended-reality-xr-market)
-- [Fintool - Vision Pro Production Halted](https://fintool.com/news/apple-vision-pro-production-halt)
+- [MacRumors - Report: Apple May Stop Producing Vision Pro by the End of 2024](https://www.macrumors.com/2024/10/23/apple-may-stop-producing-vision-pro-by-end-of-2024/)
 - [MadXR - WebXR Browser-Based Experiences 2026](https://www.madxr.io/webxr-browser-immersive-experiences-2026.html)
 
 ---

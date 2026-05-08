@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - New onboarding and navigation docs: `docs/start-here.md`, `docs/choose-an-agent.md`, and `docs/standards/blueprint-schema.md`.
 - New discovery indexes: `blueprints/README.md`, `playbooks/README.md`, `playbooks/index.md`, and `workflows/index.md`.
 - New machine-readable blueprint catalog: `blueprints/catalog.yaml`.
@@ -18,16 +19,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New named expert skillset blueprint expansion with 12 non-impersonation archetypes inspired by public work patterns associated with Elon Musk, Bill Gates, Andrej Karpathy, Steve Jobs, Jeff Bezos, Sam Altman, Jensen Huang, Satya Nadella, Naval Ravikant, Paul Graham, Linus Torvalds, and Warren Buffett.
 
 ### Changed
+
 - Reworked README with a 2-minute onboarding path, documentation hub links, and updated playbook/workflow references.
 - Replaced broken or stale orchestration links and repaired anchor navigation in orchestration/workflow reference docs.
 - Upgraded blueprint linting to a schema-aware baseline and wired CI workflows to run `tools/lint-agents.sh`.
 - Normalized naming and portability in key blueprints (`ux-architect`, `senior-developer`, `agents-orchestrator`).
 
 ### Fixed
+
 - Fixed broken internal markdown links across top-level, playbook, and workflow docs.
 - Repaired corrupted encoding artifacts in `mobile-app-builder`, `rapid-prototyper`, and `app-store-optimizer` blueprints.
 
 ### Docs
+
 - Added first-time contributor quick lane in `CONTRIBUTING.md`.
 - Added trust and governance clarity updates to `SECURITY.md`, `GOVERNANCE.md`, `CODE_OF_CONDUCT.md`, and `.github/PULL_REQUEST_TEMPLATE.md`.
 

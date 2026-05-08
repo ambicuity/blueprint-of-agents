@@ -36,7 +36,6 @@ We value:
 
 Disputes or disagreements regarding technical direction or community conduct will be resolved by the BDFL, prioritizing the long-term health and stability of the project. If you have concerns about the governance process or a specific decision, please open an issue or start a GitHub Discussion to address it constructively.
 
-
 ## RFC and Decision Log
 
 Major structural and policy changes should be proposed through an `Architecture Proposal` issue and tracked with a decision summary in the issue thread.
