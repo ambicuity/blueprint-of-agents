@@ -37,6 +37,15 @@ Opening a public issue exposes the vulnerability to all users -- including malic
 
 We will keep you informed throughout the process and, with your permission, will credit you in the security advisory upon public disclosure.
 
+## Severity Taxonomy
+
+| Severity | Description | Target Initial Action |
+|---|---|---|
+| Critical | Active exploit, credential exposure, remote code execution | Immediate triage, same-day mitigation plan |
+| High | Significant security weakness with clear abuse path | Triage within 7 days |
+| Medium | Limited impact vulnerability or hard-to-exploit issue | Triage within 14 days |
+| Low | Defense-in-depth hardening or low-impact issue | Best-effort scheduling |
+
 ## Scope
 
 The following are **in scope** for security reports:
