@@ -67,6 +67,11 @@ Deliver:
 2. REST API endpoints list
 3. WebSocket events for real-time board updates
 4. Auth strategy recommendation
+
+**Expected outputs by end of Week 1**
+- `retroboard-architecture.md`
+- `retroboard-schema.sql`
+- `retroboard-api-spec.md`
 ```
 
  Week 2: Build Core Features
@@ -105,6 +110,11 @@ Evaluate:
 3. Any technical debt that will bite us at launch?
 ```
 
+**Expected outputs by end of Week 2**
+- Midpoint quality verdict (`PASS` or `NEEDS WORK`)
+- Prioritized cut list for release scope
+- Critical risk register (top 3)
+
  Week 3: Polish + Landing Page
 
 **Step 6 — Frontend Developer continues, Growth Hacker starts**
@@ -140,6 +150,11 @@ RetroBoard is ready to launch. Evaluate production readiness:
 Run through the launch checklist and give a GO / NO-GO decision.
 Require evidence for each criterion.
 ```
+
+**Expected launch artifacts**
+- Production readiness checklist
+- GO/NO-GO decision with evidence
+- First-week KPI dashboard specification
 
  Key Patterns
 
