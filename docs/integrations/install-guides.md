@@ -2,19 +2,21 @@
 
 Use the scripts in `tools/` to install and validate portable packs.
 
+Last reviewed: 2026-05-08
+
 ## Platform Install Matrix
 
-This matrix mirrors common marketplace/install surfaces across major runtimes and tools.
+This matrix separates verified local install paths from marketplace-style references. The canonical path for this repository is always the script-based installer because the repo does not currently publish a live marketplace listing for every runtime.
 
 ### Claude Code Official Marketplace
 
 - **Status**: Reference only
-- **Install method**: Anthropic official plugin marketplace UI/command surface
-- **Command sequence**:
+- **Install method**: Use Claude Code's supported local surfaces: custom agents, custom slash commands, MCP servers, and project/user configuration.
+- **Command sequence (placeholder only)**:
 ```bash
 /plugin install blueprint-of-agents@claude-plugins-official
 ```
-- **Notes**: This repository does not currently publish an official marketplace plugin entry.
+- **Notes**: This repository does not currently publish an Anthropic official marketplace plugin entry. Do not present the placeholder command as a verified live install command.
 - **Fallback (canonical)**:
 ```bash
 ./tools/install-skill-pack.sh --target claude --pack blueprints --dry-run
@@ -24,13 +26,13 @@ This matrix mirrors common marketplace/install surfaces across major runtimes an
 ### Claude Code Marketplace
 
 - **Status**: Reference only
-- **Install method**: Custom plugin marketplace registration and install
-- **Command sequence**:
+- **Install method**: Community/custom marketplace registration, if a registry is created later.
+- **Command sequence (placeholder only)**:
 ```bash
 /plugin marketplace add ambicuity/blueprint-of-agents-marketplace
 /plugin install blueprint-of-agents@blueprint-of-agents-marketplace
 ```
-- **Notes**: Marketplace metadata is documented via templates but no live marketplace publication is provided in this repo.
+- **Notes**: Marketplace metadata is documented via templates, but no live marketplace publication is provided in this repo.
 - **Fallback (canonical)**:
 ```bash
 ./tools/install-skill-pack.sh --target claude --pack blueprints --dry-run
@@ -40,13 +42,14 @@ This matrix mirrors common marketplace/install surfaces across major runtimes an
 ### OpenAI Codex CLI
 
 - **Status**: Partial
-- **Install method**: Plugin search UX is platform-native; this repo currently ships script-based install as canonical path.
-- **Command sequence (marketplace-style reference)**:
+- **Install method**: Codex supports skills and plugins as platform-native extension surfaces. This repo currently ships script-based skill/template install as the canonical path.
+- **Command sequence (app/CLI reference only)**:
 ```text
 /plugins
 Search for "blueprint-of-agents"
 Select Install Plugin
 ```
+- **Notes**: Use the in-product plugin library only after a `blueprint-of-agents` listing exists. Until then, install the portable skill templates locally.
 - **Fallback (canonical)**:
 ```bash
 ./tools/install-skill-pack.sh --target codex --pack templates --dry-run
@@ -71,8 +74,8 @@ Select Install Plugin
 ### Cursor (Plugin Marketplace)
 
 - **Status**: Partial
-- **Install method**: Cursor marketplace/chat plugin flow
-- **Command sequence (marketplace-style reference)**:
+- **Install method**: Cursor rules/workflow install is the supported local path in this repo. Marketplace/chat plugin flow is listed only as a future distribution reference.
+- **Command sequence (placeholder only)**:
 ```text
 /add-plugin blueprint-of-agents
 ```
@@ -86,7 +89,7 @@ Select Install Plugin
 ### OpenCode
 
 - **Status**: Partial
-- **Install method**: OpenCode plugin reference flow
+- **Install method**: Local skills/config install through this repository's portable script.
 - **Command sequence (reference)**:
 ```text
 Fetch and follow instructions from https://raw.githubusercontent.com/ambicuity/blueprint-of-agents/main/docs/integrations/install-guides.md
@@ -100,8 +103,8 @@ Fetch and follow instructions from https://raw.githubusercontent.com/ambicuity/b
 ### GitHub Copilot CLI
 
 - **Status**: Reference only
-- **Install method**: Copilot plugin marketplace commands
-- **Command sequence (reference)**:
+- **Install method**: Copilot plugin marketplace commands, if a compatible marketplace target is published later.
+- **Command sequence (placeholder only)**:
 ```bash
 copilot plugin marketplace add ambicuity/blueprint-of-agents-marketplace
 copilot plugin install blueprint-of-agents@blueprint-of-agents-marketplace
@@ -116,12 +119,13 @@ copilot plugin install blueprint-of-agents@blueprint-of-agents-marketplace
 ### Gemini CLI
 
 - **Status**: Partial
-- **Install method**: Gemini extensions install/update flow
-- **Command sequence (marketplace-style reference)**:
+- **Install method**: Gemini extensions can install from GitHub or local paths. This repo's script currently installs portable skill templates into the Gemini extension directory.
+- **Command sequence (GitHub extension reference)**:
 ```bash
 gemini extensions install https://github.com/ambicuity/blueprint-of-agents
 gemini extensions update blueprint-of-agents
 ```
+- **Notes**: A proper Gemini extension requires a valid extension manifest at the installed extension root. Use the fallback until this repository publishes a complete Gemini extension package.
 - **Fallback (canonical)**:
 ```bash
 ./tools/install-skill-pack.sh --target gemini --pack templates --dry-run
@@ -132,9 +136,11 @@ gemini extensions update blueprint-of-agents
 
 | Topic | Clarification |
 |---|---|
-| Marketplace availability | Runtime-specific and may require publication outside this repository. |
+| Marketplace availability | Runtime-specific and requires publication outside this repository before placeholder commands are valid. |
 | Cursor classification | Cursor is workflow tooling, not a model provider. |
 | Canonical install path | `tools/install-skill-pack.sh` remains the canonical fallback install mechanism. |
+| 2026 extension pattern | Modern agent runtimes increasingly package skills, prompts, MCP servers, commands, and app connectors together; this repo keeps those pieces portable and script-installable. |
+| Verification standard | Prefer official runtime docs and a dry-run/smoke-test before documenting any command as live. |
 
 ## 1) Validate integration files
 

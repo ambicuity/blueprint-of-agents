@@ -6,10 +6,13 @@ This is a curated collection of AI agent blueprints organized into 9 divisions u
 
 ## Agent File Structure
 
-All agent files follow this structure:
-1. YAML frontmatter (`---` delimiters) with `name`, `description`, `color`
-2. H1 heading: Agent name
-3. Sections: Identity and Memory, Core Mission, Critical Rules, Technical Deliverables, Workflow Process, Communication Style, Learning and Memory, Success Metrics, Advanced Capabilities
+Canonical blueprint structure:
+1. YAML frontmatter with `name`, `description`, `color`
+2. H1 heading matching `name`
+3. Required sections: `When To Use`, `Core Mission`, `Workflow`, `Success Metrics`
+4. Recommended sections: `Inputs Required`, `Output Contract`, `Guardrails`, `Activation Prompt`, `Example Output`, `Handoff Instructions`
+
+See `docs/standards/blueprint-schema.md` for details.
 
 ## Directory Layout
 
